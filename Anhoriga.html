@@ -1,323 +1,274 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv-SE" data-theme="light">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Robert Claesson">
-
-  <!-- Primary Title & SEO -->
-  <title>Stödlinjer Sverige - Hitta Hjälp När Livet Känns Tungt | Jourhavande Präst, BRIS, Självmordslinjen</title>
-  <meta name="description" content="Stödlinjer samlar alla svenska hjälplinjer på ett ställe. Ring 90101 för akut kris, BRIS 116 111 för unga, Kvinnofridslinjen 020-50 50 50 för våldsutsatta. Gratis, anonymt, dygnet runt.">
-  <meta name="keywords" content="stödlinjer, hjälplinjer, självmordslinjen, BRIS, jourhavande präst, kvinnofridslinjen, mental hälsa, kris, depression, ångest, ensamhet, våld, akut hjälp, anhörig, närstående">
-  <link rel="canonical" href="https://stodlinjer.se/">
+  <title>Stöd för anhöriga | Stödlinjer Sverige</title>
+  <meta name="description"
+    content="Stödlinjer för dig som är anhörig eller närstående. Hitta Anhöriglinjen, SPES, Föräldralinjen, Al-Anon och akuta nummer som 112 och 90101.">
+  <meta name="keywords"
+    content="anhörig, närstående, stödlinjer, Anhöriglinjen, SPES, föräldralinjen, al-anon, självmordslinjen, 90101, 112">
+  <link rel="canonical" href="https://stodlinjer.se/anhoriga.html">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#0f1724">
-
-  <!-- Open Graph -->
-  <meta property="og:site_name" content="Stödlinjer.se">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://stodlinjer.se/">
-  <meta property="og:title" content="Stödlinjer Sverige - Hitta Hjälp När Livet Känns Tungt">
-  <meta property="og:description" content="Hitta rätt stödlinje i Sverige när livet känns tungt. Självmordslinjen, BRIS, Kvinnofridslinjen, Jourhavande präst med flera – samlade på ett ställe.">
-  <meta property="og:image" content="https://stodlinjer.se/og-image.jpg">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Stödlinjer Sverige - Hitta Hjälp När Livet Känns Tungt">
-  <meta name="twitter:description" content="Alla viktiga stödlinjer i Sverige samlade på ett ställe. Ring 90101 vid akut kris, BRIS för unga, Kvinnofridslinjen för våldsutsatta.">
-  <meta name="twitter:image" content="https://stodlinjer.se/og-image.jpg">
-
-  <!-- JSON-LD: WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Stödlinjer.se",
-    "url": "https://stodlinjer.se/",
-    "creator": {"@type": "Person","name": "Robert Claesson"},
-    "author": {"@type": "Person","name": "Robert Claesson"},
-    "inLanguage": "sv-SE",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://stodlinjer.se/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
-
-  <!-- JSON-LD: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Stödlinjer.se",
-    "url": "https://stodlinjer.se/",
-    "description": "Samlingsplats för svenska stödlinjer och hjälplinjer för psykisk hälsa, våld, missbruk, kris och anhöriga.",
-    "logo": "https://stodlinjer.se/logo.png",
-    "sameAs": [
-      "https://www.facebook.com",
-      "https://www.instagram.com",
-      "https://x.com"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "kundsupport",
-      "email": "info@stodlinjer.se",
-      "availableLanguage": ["sv"]
-    }
-  }
-  </script>
-
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'media',
-      theme: {
-        extend: {
-          colors: {
-            'background': '#020617',
-            'card': 'rgba(15,23,42,0.9)'
-          },
-          boxShadow: {
-            'glow': '0 0 30px rgba(59,130,246,0.4)'
-          }
-        }
-      }
-    }
+    (function () {
+      var t = localStorage.getItem('theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = t;
+      if (t === 'dark') document.documentElement.classList.add('dark');
+    })();
   </script>
 
-  <style>
-    body {
-      background: radial-gradient(1200px 600px at 10% 10%, rgba(167, 139, 250, 0.08), transparent 10%),
-                  radial-gradient(1000px 500px at 90% 90%, rgba(125, 211, 252, 0.04), transparent 15%),
-                  #0f1724;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      color: #e6eef8;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
-    }
-    .scrollbar-hide::-webkit-scrollbar { display: none; }
-    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-  </style>
+  <!-- Tailwind CSS via CDN (configured in assets/js/tailwind-config.js) -->
+  <script src="assets/js/tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/johanna-fageras/static/fonts/gt-walsheim/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/johanna-fageras/static/fonts/gt-pressura/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
 </head>
 
-<body class="min-h-screen">
+<body class="min-h-screen flex flex-col page-shell">
   <!-- Skip link -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Hoppa till innehåll</a>
-
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md">Hoppa
+    till innehåll</a>
   <!-- Header -->
-  <header class="bg-gray-900/40 backdrop-blur-sm border-b border-white/5 sticky top-0 z-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6">
-      <div class="text-center">
-        <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2">Stödlinjer Sverige</h1>
-        <p class="text-lg text-gray-400 max-w-2xl mx-auto">När livet känns tungt – du är inte ensam. Hitta rätt hjälp direkt.</p>
-        <p class="text-sm text-gray-500 mt-2">
-          Skapad av <a href="mailto:info@stodlinjer.se" rel="author" class="underline hover:text-gray-300">Robert Claesson</a>
-        </p>
+  <header class="header-shell">
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="brand-mark" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+        <div class="header-text">
+          <p class="text-xs font-semibold uppercase tracking-wide" style="margin:0;color:var(--accent)">Stöd för
+            anhöriga</p>
+          <h1>Hjälp när du stöttar</h1>
+          <p>Närstående behöver också stöd och råd.</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="index.html" class="header-link" aria-label="Till startsidan"><i class="fa-solid fa-house"></i>
+          Startsida</a>
+        <a href="tel:112" class="header-link sm:hidden" aria-label="Ring 112"><i
+            class="fa-solid fa-triangle-exclamation"></i> Ring 112</a>
+        <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="true">
+          <span id="themeIcon" aria-hidden="true"><i class="fa-solid fa-moon"></i></span>
+          <span id="themeLabel">Mörkt läge</span>
+        </button>
       </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="flex-1">
     <!-- Hero Section -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-      <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 sm:p-12 text-white shadow-2xl">
-        <div class="max-w-3xl">
-          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Akut kris? Ring nu</h2>
-          <p class="text-xl text-blue-100 mb-8">
-            Dessa nummer svarar dygnet runt, alla dagar om året. Samtalen är anonyma och kostnadsfria.
-          </p>
-          <div class="grid sm:grid-cols-2 gap-4">
-
-            <!-- Mind – Självmordslinjen -->
-            <a href="tel:90101"
-               class="bg-white text-blue-700 px-8 py-5 rounded-2xl font-bold text-xl hover:bg-blue-50 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-3"
-               aria-label="Ring Mind – Självmordslinjen 90101">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span>Mind – Självmordslinjen (90101)</span>
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+      <div class="hero-grid">
+        <div class="surface-card strong-card p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="pill"><i class="fa-solid fa-shield-heart"></i> Akut stöd</span>
+            <span class="stat-chip"><i class="fa-regular fa-handshake"></i> Dela med den drabbade</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-3 text-slate-900 dark:text-white">Ring om läget är akut</h2>
+          <p class="text-lg muted mb-6">Säkra numret till dig själv och dela det med den du stöttar. Samtal är anonyma
+            och gratis.</p>
+          <div class="grid-hotlines">
+            <a href="tel:90101" class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+              aria-label="Ring Mind Självmordslinjen 90101">
+              <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]"><i
+                  class="fa-solid fa-headset"></i> Mind Självmordslinjen</div>
+              <div class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number">90101</div>
+              <span class="tag">Samtal &amp; chatt</span>
             </a>
-
-            <!-- SOS Alarm -->
-            <a href="tel:112"
-               class="bg-red-600 text-white px-8 py-5 rounded-2xl font-bold text-xl hover:bg-red-500 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-3"
-               aria-label="Ring SOS Alarm 112">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="12" y1="8" x2="12" y2="12"></line>
-                <line x1="12" y1="16" x2="12.01" y2="16"></line>
-              </svg>
-              <span>SOS Alarm 112</span>
+            <a href="tel:112" class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+              aria-label="Ring SOS Alarm 112">
+              <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]"><i
+                  class="fa-solid fa-triangle-exclamation"></i> SOS Alarm</div>
+              <div class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number">112</div>
+              <span class="badge-urgent">Akut fara</span>
+            </a>
+            <a href="tel:020505050" class="surface-card p-4 flex flex-col gap-2 hover:shadow-glow transition"
+              aria-label="Ring Kvinnofridslinjen 020-505050">
+              <div class="flex items-center gap-2 text-sm font-semibold text-[var(--accent)]"><i
+                  class="fa-solid fa-shield-halved"></i> Kvinnofridslinjen</div>
+              <div class="text-2xl font-bold text-slate-900 dark:text-white leading-none phone-number">020-505050</div>
+              <span class="tag">Våld &amp; hot</span>
             </a>
           </div>
+          <div class="floating-strip mt-5 text-sm">
+            <div><strong><i class="fa-solid fa-user-lock"></i> Alltid anonymt</strong><br><span class="muted">Ingen ser
+                ditt nummer och samtalen är kostnadsfria.</span></div>
+            <div><strong><i class="fa-solid fa-people-group"></i> Stöd till anhöriga</strong><br><span
+                class="muted">Flera linjer kan prata direkt med dig som närstående.</span></div>
+            <div><strong><i class="fa-solid fa-calendar-check"></i> Öppet alla dagar</strong><br><span
+                class="muted">Hjälp även kvällar, helger och storhelger.</span></div>
+          </div>
+        </div>
 
-          <p class="mt-6 text-sm text-blue-200">
-            Alla samtal är konfidentiella och anonyma. Du behöver inte berätta vem du är. Hjälpen är alltid gratis.
-          </p>
+        <div class="surface-card p-6 sm:p-7 flex flex-col gap-4">
+          <div class="pill w-fit"><i class="fa-solid fa-compass"></i> Vad du hittar här</div>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">Snabb väg till stöd för anhöriga</h3>
+          <ul class="space-y-3 text-sm sm:text-base muted">
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i>Linjer som lyssnar på dig som
+              närstående.</li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i>Sök på oro, våld, missbruk
+              eller
+              sorg.</li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i>Klickbara telefonnummer och
+              länkar.
+            </li>
+            <li class="flex gap-3"><i class="fa-solid fa-check text-[var(--accent)]"></i>Tips på var du kan få råd och
+              avlastning.</li>
+          </ul>
+          <div class="flex flex-wrap gap-2">
+            <span class="stat-chip"><i class="fa-solid fa-people-arrows"></i> Anhörig</span>
+            <span class="stat-chip"><i class="fa-solid fa-ribbon"></i> Sorg &amp; suicid</span>
+            <span class="stat-chip"><i class="fa-solid fa-child-reaching"></i> Föräldrar</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Intro Text for SEO -->
-    <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-8">
-      <div class="bg-white/5 rounded-2xl p-8 border border-white/5 mb-8">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Hitta rätt stödlinje i Sverige</h2>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          Ibland känns livet övermäktigt. Det kan handla om ångest, depression, ensamhet, våld, missbruk eller oro för någon annan.
-          Då kan det vara skönt att prata med någon som lyssnar utan att döma.
+    <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-5 sm:pb-7">
+      <div class="surface-card p-6 sm:p-8 mb-3 sm:mb-5">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">Du som är anhörig behöver också
+          stöd</h2>
+        <p class="muted leading-relaxed mb-3">
+          Att stå bredvid någon som mår dåligt, lever med beroende eller befinner sig i kris tär på orken. Här hittar du
+          stödlinjer som vänder sig direkt till anhöriga.
         </p>
-        <p class="text-gray-300 leading-relaxed mb-3">
-          På Stödlinjer.se samlar vi Sveriges viktigaste stödlinjer på ett ställe – så att du snabbt kan hitta rätt nummer att ringa eller chatt att skriva till.
-          Alla stödlinjer här är seriösa aktörer som erbjuder anonymt stöd.
-        </p>
-        <p class="text-gray-400 text-sm">
-          Om du eller någon i din närhet är i omedelbar fara: ring alltid <strong>112</strong>.
+        <p class="muted leading-relaxed mb-3">
+          Alla linjer är gratis och anonyma. Om du eller någon i din närhet är i omedelbar fara: ring alltid
+          <strong>112</strong>.
         </p>
       </div>
     </article>
 
+    <!-- Motivational Quote -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8 sm:pb-10">
+      <figure class="quote-block" role="figure" aria-label="Uppmuntrande citat">
+        <blockquote id="dailyQuote" class="quote-text">
+          <span class="quote-icon" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></span>
+          <p></p>
+        </blockquote>
+        <figcaption id="quoteAuthor" class="quote-author"></figcaption>
+      </figure>
+    </section>
+
     <!-- Search & Filters -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-10" aria-labelledby="filter-heading">
-      <div class="bg-gray-900/60 backdrop-blur-md rounded-3xl p-6 sm:p-8 border border-white/5 shadow-2xl shadow-blue-500/20">
-        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-6">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12" aria-labelledby="filter-heading">
+      <div class="surface-card search-panel p-6 sm:p-7">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-5">
           <div>
-            <h2 id="filter-heading" class="text-xl sm:text-2xl font-semibold text-white mb-1">Sök bland stödlinjer</h2>
-            <p class="text-sm text-gray-400">Filtrera på område eller sök efter namn, nummer eller beskrivning.</p>
+            <h2 id="filter-heading" class="text-xl sm:text-2xl font-semibold text-slate-900 dark:text-white">Sök bland
+              stödlinjer</h2>
+            <p class="text-sm muted">Filtrera på område eller sök efter namn, nummer eller beskrivning.</p>
+          </div>
+          <div class="flex gap-3 items-center text-sm muted-soft">
+            <span class="stat-chip">22 linjer</span>
+            <span class="stat-chip">6 kategorier</span>
           </div>
         </div>
 
         <div class="space-y-4">
-          <div class="relative">
+          <div class="search-shell">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+              class="text-slate-400">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
             <label for="searchInput" class="sr-only">Sök stödlinjer</label>
-            <div class="flex items-center gap-2 rounded-2xl bg-black/40 border border-white/10 px-4 py-3 focus-within:ring-2 focus-within:ring-blue-500 focus-within:border-blue-500">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   aria-hidden="true" class="text-gray-400">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.3-4.3"></path>
-              </svg>
-              <input type="search" id="searchInput" placeholder="Sök efter t.ex. BRIS, ångest, våld, anhörig..."
-                     class="flex-1 bg-transparent border-none outline-none text-sm text-white placeholder-gray-500"
-                     aria-label="Sök bland stödlinjer">
-            </div>
+            <input type="search" id="searchInput" placeholder="Sök efter t.ex. anhörig, sorg, våld..."
+              aria-label="Sök bland stödlinjer">
           </div>
 
           <nav aria-label="Kategorier" class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide" id="categories">
-            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500 to-indigo-500 text-white shadow-lg"
-                    data-category="all" aria-pressed="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M2 12h20"></path>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10"></path>
-              </svg>
+            <button class="category-btn is-active" data-category="all" aria-pressed="true">
               <span>Alla</span>
             </button>
-
-            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
-                    data-category="psykisk-halsa" aria-pressed="false">
-              <span>🧠 Psykisk hälsa</span>
-            </button>
-
-            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
-                    data-category="barn-unga" aria-pressed="false">
-              <span>🧒 Barn & unga</span>
-            </button>
-
-            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
-                    data-category="vald" aria-pressed="false">
-              <span>🛡 Våld & utsatthet</span>
-            </button>
-
-            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
-                    data-category="missbruk" aria-pressed="false">
-              <span>🍺 Missbruk & beroende</span>
-            </button>
-
-            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
-                    data-category="anhörig" aria-pressed="false">
-              <span>👨‍👩‍👧 Anhörig</span>
-            </button>
-
-            <button class="category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors"
-                    data-category="aldre" aria-pressed="false">
-              <span>👵 Äldre</span>
-            </button>
+            <button class="category-btn" data-category="psykisk-halsa" aria-pressed="false"><span><i
+                  class="fa-solid fa-brain"></i> Psykisk hälsa</span></button>
+            <button class="category-btn" data-category="barn-unga" aria-pressed="false"><span><i
+                  class="fa-solid fa-children"></i> Barn &amp; unga</span></button>
+            <button class="category-btn" data-category="vald" aria-pressed="false"><span><i
+                  class="fa-solid fa-shield-halved"></i> Våld &amp; utsatthet</span></button>
+            <button class="category-btn" data-category="missbruk" aria-pressed="false"><span><i
+                  class="fa-solid fa-wine-bottle"></i> Missbruk &amp; beroende</span></button>
+            <button class="category-btn" data-category="anhoriga" aria-pressed="false"><span><i
+                  class="fa-solid fa-people-roof"></i> Anhöriga</span></button>
+            <button class="category-btn" data-category="aldre" aria-pressed="false"><span><i
+                  class="fa-solid fa-person-cane"></i> Äldre</span></button>
           </nav>
         </div>
       </div>
     </section>
 
     <!-- Results Grid -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-12">
-      <div id="resultsInfo" class="text-sm text-gray-400 mb-3"></div>
-      <div id="linesGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-        <!-- Fylls av JavaScript -->
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+      <div class="flex items-center gap-2 mb-3">
+        <div id="resultsInfo" class="text-sm muted" aria-live="polite"></div>
+        <button id="clearTag" type="button" class="tag hidden">Rensa</button>
       </div>
-
-      <p id="noResults" class="hidden text-gray-400 text-sm mt-6">
-        Inga stödlinjer matchar din sökning. Testa att ändra sökord eller välja en annan kategori.
-      </p>
+      <div id="linesGrid" class="grid gap-5 md:grid-cols-2 xl:grid-cols-3"></div>
+      <p id="noResults" class="hidden muted text-sm mt-4">Inga stödlinjer matchar din sökning. Testa att ändra sökord
+        eller välja en annan kategori.</p>
     </section>
 
     <!-- Dedicated section for relatives -->
-    <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
-      <div class="bg-black/40 border border-white/5 rounded-2xl p-6 sm:p-8">
-        <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">För dig som är anhörig eller närstående</h2>
-        <p class="text-gray-300 text-sm leading-relaxed mb-3">
-          Att stå bredvid någon som mår dåligt, har ett beroende, är sjuk eller har tagit sitt liv kan vara minst lika tungt
-          som att vara drabbad själv. Du får känna dig trött, arg, maktlös eller uppgiven – och du har rätt till stöd.
+    <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+      <div class="surface-card p-6 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">Stöd som vänder sig till anhöriga
+        </h2>
+        <p class="muted text-sm leading-relaxed mb-3">
+          Att vara närstående kan vara tungt, frustrerande och ensamt. Du har rätt till stöd och avlastning.
         </p>
-        <p class="text-gray-300 text-sm leading-relaxed mb-4">
-          Här är några stödlinjer som vänder sig särskilt till dig som är anhörig eller närstående:
+        <p class="muted text-sm leading-relaxed mb-4">
+          Några linjer som lyssnar på dig:
         </p>
-        <ul class="list-disc list-inside text-gray-300 text-sm space-y-2">
-          <li><strong>Anhöriglinjen</strong> – för dig som är anhörig eller närstående till någon som är sjuk, har funktionsnedsättning,
-            beroende eller andra svårigheter.</li>
-          <li><strong>SPES stödlinje</strong> – för dig som har förlorat någon i suicid och vill prata med någon som varit med om liknande.</li>
-          <li><strong>Föräldralinjen</strong> – för dig som är förälder eller annan viktig vuxen kring barn och unga och känner oro.</li>
-          <li><strong>Al-Anon Familjegrupper</strong> – gemenskap för anhöriga till alkoholister, med möten runt om i Sverige och online.</li>
+        <ul class="list-disc list-inside muted text-sm space-y-2">
+          <li><strong>Anhöriglinjen</strong> – råd och stöd när du stöttar någon med sjukdom, funktionsnedsättning eller
+            beroende.</li>
+          <li><strong>SPES stödlinje</strong> – prata med andra som förlorat någon i suicid.</li>
+          <li><strong>Föräldralinjen</strong> – stöd till dig som är orolig för ett barn eller en ung person.</li>
+          <li><strong>Al-Anon Familjegrupper</strong> – gemenskap för anhöriga till alkoholister, med möten även online.
+          </li>
         </ul>
-        <p class="text-gray-400 text-xs mt-4">
-          Information om telefontider och kontaktvägar kan förändras. Kontrollera alltid aktuella uppgifter på respektive organisations webbplats.
+        <p class="text-xs muted mt-4">
+          Information om telefontider och kontaktvägar kan förändras. Kontrollera alltid aktuella uppgifter på
+          respektive organisations webbplats.
         </p>
       </div>
     </article>
 
     <!-- FAQ / Info -->
-    <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+    <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-16 sm:pb-18">
       <div class="grid gap-6 md:grid-cols-2">
-        <section class="bg-black/40 border border-white/5 rounded-2xl p-6">
-          <h2 class="text-xl font-semibold text-white mb-3">När ska jag ringa 90101?</h2>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Mind Självmordslinjen på <strong>90101</strong> finns för dig som har allvarliga tankar på att skada dig själv,
+        <section class="surface-card p-6">
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">När ska jag ringa 90101?</h2>
+          <p class="muted text-sm leading-relaxed">
+            Mind Självmordslinjen på <strong>90101</strong> finns för dig som har allvarliga tankar på att skada dig
+            själv,
             eller för dig som är orolig för någon annan. Du kan vara anonym och de som svarar är utbildade volontärer.
           </p>
         </section>
 
-        <section class="bg-black/40 border border-white/5 rounded-2xl p-6">
-          <h2 class="text-xl font-semibold text-white mb-3">När ska jag ringa 112?</h2>
-          <p class="text-gray-300 text-sm leading-relaxed">
-            Ring <strong>112</strong> vid akuta, livshotande situationer – till exempel om någon inte andas, har tagit en överdos,
+        <section class="surface-card p-6">
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">När ska jag ringa 112?</h2>
+          <p class="muted text-sm leading-relaxed">
+            Ring <strong>112</strong> vid akuta, livshotande situationer – till exempel om någon inte andas, har tagit
+            en överdos,
             blivit allvarligt skadad eller om du bedömer att det finns omedelbar fara för liv.
           </p>
         </section>
 
-        <section class="bg-black/40 border border-white/5 rounded-2xl p-6 md:col-span-2">
-          <h2 class="text-xl font-semibold text-white mb-3">Är samtalen anonyma?</h2>
-          <p class="text-gray-300 text-sm leading-relaxed">
+        <section class="surface-card p-6 md:col-span-2">
+          <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">Är samtalen anonyma?</h2>
+          <p class="muted text-sm leading-relaxed">
             De stödlinjer som listas här är i regel anonyma och du behöver inte uppge ditt namn.
             Läs alltid mer på respektive organisations webbplats om vad som gäller.
           </p>
@@ -327,307 +278,36 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-black/20 backdrop-blur-sm border-t border-white/5 text-gray-400 py-12">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid sm:grid-cols-2 gap-6 items-start">
-        <div>
-          <p class="text-sm">
-            Stödlinjer.se är en ideell informationssida som samlar svenska stödlinjer på ett ställe.
-            Informationen kan förändras – kontrollera alltid aktuella öppettider och kontaktuppgifter på respektive organisations webbplats.
-          </p>
+  <footer class="footer-shell">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-block">
+          <div class="footer-heading"><i class="fa-solid fa-life-ring"></i> Om Stödlinjer.se</div>
+          <p>En ideell infosida som samlar svenska stödlinjer på ett ställe. Kontrollera alltid aktuella tider på
+            respektive webbplats.</p>
+          <p class="footer-meta">Senast uppdaterad: manuellt underhåll – tipsa om ändringar!</p>
         </div>
-        <div class="text-sm sm:text-right space-y-1">
-          <p>Kontakt: <a href="mailto:info@stodlinjer.se" class="underline hover:text-gray-200">info@stodlinjer.se</a></p>
-          <p>Skapad av Robert Claesson</p>
+        <div class="footer-block">
+          <div class="footer-heading"><i class="fa-solid fa-envelope"></i> Kontakt</div>
+          <p>Maila <a href="mailto:info@stodlinjer.se" class="footer-link"><i class="fa-solid fa-paper-plane"></i>
+              info@stodlinjer.se</a> med förbättringar.</p>
+          <p class="footer-meta">Skapad av Robert Claesson.</p>
+        </div>
+      </div>
+      <div class="footer-quick">
+        <div class="footer-heading"><i class="fa-solid fa-rocket"></i> Snabba länkar</div>
+        <div class="footer-quick-links">
+          <a class="footer-link" href="#filter-heading"><i class="fa-solid fa-magnifying-glass"></i> Sök stödlinjer</a>
+          <a class="footer-link" href="index.html"><i class="fa-solid fa-house"></i> Startsida</a>
+          <a class="footer-link" href="tel:112"><i class="fa-solid fa-triangle-exclamation"></i> Ring 112 vid akut
+            fara</a>
+          <a class="footer-link" href="tel:90101"><i class="fa-solid fa-phone-volume"></i> Självmordslinjen 90101</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Logic for cards & filters -->
-  <script>
-  // ----- DATA -----
-  const supportLines = [
-    {
-      id: 1,
-      name: "Mind – Självmordslinjen",
-      url: "https://mind.se/sjalvmordslinjen/",
-      number: "90101",
-      description: "För dig som har tankar på att avsluta livet eller är orolig för någon annan.",
-      category: "psykisk-halsa",
-      available: "Dygnet runt, alla dagar",
-      urgent: true,
-      tags: ["självmordstankar", "akut", "kris", "oro för annan"]
-    },
-    {
-      id: 2,
-      name: "Jourhavande präst",
-      url: "https://www.svenskakyrkan.se/jourhavandeprast",
-      number: "112 (be att få tala med Jourhavande präst)",
-      description: "För samtal om existentiella frågor, oro, sorg, ensamhet och livskriser.",
-      category: "psykisk-halsa",
-      available: "Alla nätter 21–06 via 112, chatt vissa tider",
-      tags: ["oro", "existentiella frågor", "tro", "sorg", "ensamhet"]
-    },
-    {
-      id: 3,
-      name: "BRIS – Barn och unga",
-      url: "https://www.bris.se/",
-      number: "116 111",
-      description: "För dig under 18. Prata om vad som helst, anonymt.",
-      category: "barn-unga",
-      available: "Vardagar 10–21, helger 13–21",
-      tags: ["barn", "unga", "tonåring", "mobbning", "skola", "ångest"]
-    },
-    {
-      id: 4,
-      name: "Kvinnofridslinjen",
-      url: "https://kvinnofridslinjen.se/",
-      number: "020-50 50 50",
-      description: "För dig som är utsatt för våld eller hot i nära relation, eller är anhörig.",
-      category: "vald",
-      available: "Dygnet runt, alla dagar",
-      urgent: true,
-      tags: ["våld", "relation", "hot", "kvinna", "anhörig"]
-    },
-    {
-      id: 5,
-      name: "Alkohollinjen",
-      url: "https://www.1177.se/liv--halsa/beroende-och-missbruk/alkoholmissbruk-och-alkoholberoende/",
-      number: "020-84 44 48",
-      description: "För dig som funderar över dina eller någon annans alkoholvanor.",
-      category: "missbruk",
-      available: "Se aktuella tider på webbplatsen",
-      tags: ["alkohol", "missbruk", "beroende", "anhörig"]
-    },
-    {
-      id: 6,
-      name: "ANONYMA ALKOHOLISTER (AA)",
-      url: "https://aa.se/",
-      number: "",
-      description: "Gemenskap för dig som vill sluta dricka. Möten runt om i landet och online.",
-      category: "missbruk",
-      available: "Tider varierar – se aa.se",
-      tags: ["alkohol", "beroende", "stödgrupp"]
-    },
-    {
-      id: 7,
-      name: "Spelberoendegruppen",
-      url: "https://spelberoende.se/",
-      number: "020-81 91 00",
-      description: "Stöd till dig som har problem med spel om pengar, och till anhöriga.",
-      category: "missbruk",
-      available: "Se aktuella tider på webbplatsen",
-      tags: ["spel", "beroende", "skulder", "anhörig"]
-    },
-    {
-      id: 8,
-      name: "Äldrelinjen (Mind)",
-      url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/",
-      number: "020-22 22 33",
-      description: "För äldre och anhöriga. Någon som lyssnar när livet känns tungt.",
-      category: "aldre",
-      available: "Se aktuella tider på Mind",
-      tags: ["äldre", "anhörig", "ensamhet", "stöd"]
-    },
-    {
-      id: 9,
-      name: "Mansjouren",
-      url: "https://mansjouren.se/",
-      number: "020-50 00 00",
-      description: "Stöd för män som är utsatta för psykisk ohälsa, våld, hot eller livskriser. Anonymt och kostnadsfritt.",
-      category: "vald",
-      available: "Alla dagar 12–14 & 18–20 (lördagar endast 12–14)",
-      urgent: true,
-      tags: ["män", "våld", "psykisk ohälsa", "kris", "hot", "livskris"]
-    },
-    {
-      id: 10,
-      name: "Anhöriglinjen",
-      url: "https://anhorigasriksforbund.se/anhoriglinjen/",
-      number: "0200-239 500",
-      description: "Nationell stödtelefon för dig som är anhörig eller närstående och behöver råd, stöd eller någon att prata med.",
-      category: "anhörig",
-      available: "Se aktuella telefontider på Anhörigas Riksförbunds webbplats",
-      tags: ["anhörig", "närstående", "rättigheter", "stöd"]
-    },
-    {
-      id: 11,
-      name: "SPES – stödlinje för efterlevande",
-      url: "https://spes.se/stodlinjer/",
-      number: "020-18 18 00",
-      description: "Stödlinje för dig som mist någon i suicid. Samtal från andra efterlevande.",
-      category: "anhörig",
-      available: "Alla dagar 19–22",
-      tags: ["anhörig", "efterlevande", "suicid", "sorg"]
-    },
-    {
-      id: 12,
-      name: "Föräldralinjen (Mind)",
-      url: "https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/",
-      number: "020-85 20 00",
-      description: "För dig som är förälder eller annan viktig vuxen och känner oro för ett barn eller en ung person.",
-      category: "anhörig",
-      available: "Se aktuella tider på Mind",
-      tags: ["förälder", "anhörig", "barn", "unga", "oro"]
-    },
-    {
-      id: 13,
-      name: "Al-Anon Familjegrupper",
-      url: "https://www.al-anon.se/",
-      number: "08-643 13 93",
-      description: "Gemenskap för anhöriga till alkoholister. Möten och stödgrupper i hela landet och online.",
-      category: "anhörig",
-      available: "Se möten och kontakt på al-anon.se",
-      tags: ["anhörig", "alkohol", "medberoende", "stödgrupp"]
-    }
-  ];
-
-  // ----- STATE -----
-  let currentCategory = 'all';
-  let searchQuery = '';
-
-  // ----- FILTER -----
-  function filterLines() {
-    let filtered = supportLines.slice();
-
-    if (currentCategory !== 'all') {
-      filtered = filtered.filter(line => line.category === currentCategory);
-    }
-
-    if (searchQuery.trim() !== '') {
-      const q = searchQuery.toLowerCase();
-      filtered = filtered.filter(line => {
-        return (
-          (line.name && line.name.toLowerCase().includes(q)) ||
-          (line.description && line.description.toLowerCase().includes(q)) ||
-          (line.number && line.number.toLowerCase().includes(q)) ||
-          (line.tags && line.tags.some(tag => tag.toLowerCase().includes(q)))
-        );
-      });
-    }
-
-    return filtered;
-  }
-
-  // ----- RENDER -----
-  function renderLines() {
-    const grid = document.getElementById('linesGrid');
-    const resultsInfo = document.getElementById('resultsInfo');
-    const noResults = document.getElementById('noResults');
-
-    const filtered = filterLines();
-
-    grid.innerHTML = '';
-
-    if (!filtered.length) {
-      resultsInfo.textContent = '';
-      noResults.classList.remove('hidden');
-      return;
-    }
-
-    noResults.classList.add('hidden');
-    resultsInfo.textContent = `Visar ${filtered.length} stödlinje${filtered.length > 1 ? 'r' : ''}.`;
-
-    filtered.forEach(line => {
-      const article = document.createElement('article');
-      article.className = 'bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 shadow-lg shadow-blue-500/10 flex flex-col gap-3';
-      article.setAttribute('itemscope', '');
-      article.setAttribute('itemtype', 'https://schema.org/ContactPoint');
-
-      const urgentLabel = line.urgent
-        ? `
-          <div class="inline-flex items-center gap-1 bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-medium mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                 aria-hidden="true">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="12" y1="8" x2="12" y2="12"></line>
-              <line x1="12" y1="16" x2="12.01" y2="16"></line>
-            </svg>
-            <span>Akut hjälp</span>
-          </div>`
-        : '';
-
-      const telHref = (line.number || '').toString().replace(/\s/g, '').replace(/-/g, '');
-
-      article.innerHTML = `
-        ${urgentLabel}
-        <h3 class="text-2xl font-bold text-white mb-2" itemprop="name">
-          ${line.url
-            ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="hover:text-blue-300 transition-colors">${line.name}</a>`
-            : line.name}
-        </h3>
-
-        ${line.number
-          ? `<a href="tel:${telHref}"
-               class="inline-flex items-center gap-2 text-3xl font-bold text-blue-400 hover:text-blue-300 mb-4 transition-colors"
-               itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                   viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                   aria-hidden="true">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.63A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span>${line.number}</span>
-            </a>`
-          : ''
-        }
-
-        <p class="text-gray-300 mb-4 leading-relaxed" itemprop="description">${line.description}</p>
-
-        <div class="flex items-center gap-2 text-sm text-gray-400">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-               viewBox="0 0 24 24" fill="none" stroke="currentColor"
-               stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-               aria-hidden="true">
-            <circle cx="12" cy="12" r="10"></circle>
-            <polyline points="12 6 12 12 16 14"></polyline>
-          </svg>
-          <span itemprop="hoursAvailable">${line.available}</span>
-        </div>
-
-        ${line.tags && line.tags.length
-          ? `<div class="flex flex-wrap gap-2 mt-3">
-              ${line.tags
-                .map(tag => `<span class="px-2.5 py-1 rounded-full bg-black/40 border border-white/10 text-xs text-gray-300">${tag}</span>`)
-                .join('')}
-             </div>`
-          : ''}
-      `;
-
-      grid.appendChild(article);
-    });
-  }
-
-  // ----- EVENTS -----
-  const searchInput = document.getElementById('searchInput');
-  const categoryButtons = Array.from(document.querySelectorAll('.category-btn'));
-
-  searchInput.addEventListener('input', (e) => {
-    searchQuery = e.target.value || '';
-    renderLines();
-  });
-
-  categoryButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      currentCategory = button.dataset.category || 'all';
-
-      categoryButtons.forEach(btn => {
-        btn.className = 'category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-black/40 text-gray-200 border border-white/10 hover:border-blue-400 hover:text-white transition-colors';
-        btn.setAttribute('aria-pressed', 'false');
-      });
-
-      button.className = 'category-btn flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500 to-blue-400 text-white shadow-lg';
-      button.setAttribute('aria-pressed', 'true');
-
-      renderLines();
-    });
-  });
-
-  // ----- INITIALIZE -----
-  renderLines();
-  </script>
+  <script type="module" src="assets/js/app.js"></script>
 </body>
+
 </html>
