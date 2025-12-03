@@ -1,7 +1,12 @@
 :root {
   /* Light theme */
   --bg: #fdf8f3;
-  --bg-pattern: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(252, 244, 237, 0.92) 45%, rgba(248, 236, 224, 0.9) 100%);
+  --bg-pattern: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(252, 244, 237, 0.92) 45%,
+    rgba(248, 236, 224, 0.9) 100%
+  );
   --card: #ffffff;
   --card-strong: #fffaf3;
   --border: #e7d9c9;
@@ -14,14 +19,19 @@
   --accent-2: #c65f3d;
   --accent-3: #f4a261;
   --shadow: 0 6px 14px rgba(31, 41, 55, 0.06);
-  --shadow-strong: 0 10px 22px rgba(31, 41, 55, 0.10);
+  --shadow-strong: 0 10px 22px rgba(31, 41, 55, 0.1);
   color-scheme: light;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   /* Dark theme */
   --bg: #0f0f12;
-  --bg-pattern: linear-gradient(180deg, rgba(18, 18, 24, 0.96) 0%, rgba(12, 12, 18, 0.98) 60%, rgba(10, 10, 14, 1) 100%);
+  --bg-pattern: linear-gradient(
+    180deg,
+    rgba(18, 18, 24, 0.96) 0%,
+    rgba(12, 12, 18, 0.98) 60%,
+    rgba(10, 10, 14, 1) 100%
+  );
   --card: #13141a;
   --card-strong: #171821;
   --border: #1f2530;
@@ -45,7 +55,8 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'GT Walsheim', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Athletics', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
   font-weight: 400;
   font-size: 16px;
   background: var(--bg);
@@ -53,19 +64,19 @@ body {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  line-height: 1.5;
-  letter-spacing: 0;
+  line-height: 1.55;
+  letter-spacing: 0.005em;
 }
 
 /* ==========================================================================
-   Typography Scale & Rhythm for GT Walsheim
+   Typography Scale & Rhythm for Athletics
    ========================================================================== */
 
 .page-shell h1 {
   font-size: 1.75rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
   color: var(--text);
   margin: 0;
 }
@@ -73,26 +84,26 @@ body {
 .page-shell h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
   color: var(--text);
   margin: 0;
 }
 
 .page-shell h3 {
   font-size: 1.25rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
   color: var(--text);
   margin: 0;
 }
 
 .page-shell h4 {
   font-size: 1.125rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
-  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
   color: var(--text);
   margin: 0;
 }
@@ -100,21 +111,21 @@ body {
 /* Large display headings (hero sections) */
 .page-shell .text-3xl {
   font-size: 1.875rem !important;
-  letter-spacing: -0.035em !important;
-  line-height: 1.1 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
 }
 
 .page-shell .text-4xl {
   font-size: 2.25rem !important;
-  letter-spacing: -0.04em !important;
-  line-height: 1.05 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.1 !important;
 }
 
 @media (min-width: 640px) {
   .page-shell .sm\:text-4xl {
     font-size: 2.25rem !important;
-    letter-spacing: -0.04em !important;
-    line-height: 1.05 !important;
+    letter-spacing: -0.035em !important;
+    line-height: 1.1 !important;
   }
 }
 
@@ -122,31 +133,32 @@ body {
 .page-shell p,
 .page-shell li {
   font-weight: 400;
-  line-height: 1.55;
-  letter-spacing: 0;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
 }
 
 .page-shell .muted {
   font-weight: 400;
-  line-height: 1.55;
+  line-height: 1.45;
+  letter-spacing: 0.005em;
 }
 
 .page-shell .text-lg {
   font-size: 1.0625rem !important;
-  line-height: 1.5 !important;
-  letter-spacing: 0 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.005em !important;
 }
 
 .page-shell .text-sm {
   font-size: 0.875rem !important;
-  line-height: 1.45 !important;
-  letter-spacing: 0.005em !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
 }
 
 .page-shell .text-xs {
   font-size: 0.75rem !important;
-  line-height: 1.4 !important;
-  letter-spacing: 0.01em !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.015em !important;
 }
 
 /* Strong/bold text */
@@ -155,13 +167,17 @@ body {
   font-weight: 700;
 }
 
-/* Semi-bold for UI elements */
+/* Medium weight for UI elements (Athletics has no 600, use 500) */
 .page-shell .font-semibold {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 .page-shell .font-bold {
   font-weight: 700 !important;
+}
+
+.page-shell .font-extrabold {
+  font-weight: 800 !important;
 }
 
 /* Normalize Tailwind text utility when theme switches */
@@ -178,11 +194,11 @@ body {
    ========================================================================== */
 
 .phone-number {
-  font-family: 'GT Walsheim', system-ui, sans-serif;
-  font-weight: 700;
+  font-family: 'Athletics', system-ui, sans-serif;
+  font-weight: 800;
   font-variant-numeric: tabular-nums;
-  letter-spacing: 0.03em;
-  font-feature-settings: "tnum" 1;
+  letter-spacing: 0.04em;
+  font-feature-settings: 'tnum' 1;
 }
 
 /* ==========================================================================

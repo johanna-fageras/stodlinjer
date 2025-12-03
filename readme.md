@@ -27,7 +27,7 @@ stodlinjer/
 
 - **HTML5** med semantisk markup och Schema.org strukturerade data
 - **Tailwind CSS** via CDN med anpassad konfiguration
-- **GT Walsheim** (premium typsnitt) för modern, varm känsla
+- **Athletics** (premium typsnitt) för modern, varm känsla
 - **Font Awesome** för ikoner
 - **Vanilla JavaScript** (ES6+) för interaktivitet
 
@@ -52,14 +52,14 @@ All data finns i `data/support-lines.json`. Varje stödlinje har följande forma
   "url": "https://exempel.se/",
   "number": "020-12 34 56",
   "description": "Kort beskrivning av vem linjen hjälper.",
-  "category": "psykisk-halsa",
+  "category": "psykiskhalsa",
   "available": "Dygnet runt, alla dagar",
   "urgent": true,
   "tags": ["akut", "samtal", "anonymt"]
 }
 ```
 
-**Kategorier:** `psykisk-halsa`, `barn-unga`, `vald`, `missbruk`, `anhörig`, `aldre`
+**Kategorier:** `psykiskhalsa`, `barn-unga`, `vald`, `missbruk`, `anhörig`, `aldre`
 
 ## Skapa OG-bild (Open Graph)
 

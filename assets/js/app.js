@@ -5,17 +5,17 @@
 async function initQuote() {
   const quoteEl = document.querySelector('#dailyQuote p');
   const authorEl = document.getElementById('quoteAuthor');
-  
+
   if (!quoteEl || !authorEl) return;
-  
+
   try {
     const res = await fetch('data/quotes.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('Could not load quotes');
     const quotes = await res.json();
-    
+
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const quote = quotes[randomIndex];
-    
+
     quoteEl.textContent = quote.text;
     authorEl.textContent = quote.author;
   } catch (err) {
@@ -49,7 +49,10 @@ function showLoadingState() {
   if (grid) {
     // Create skeleton cards
     const skeletonCount = 6;
-    grid.innerHTML = Array(skeletonCount).fill(0).map(() => `
+    grid.innerHTML = Array(skeletonCount)
+      .fill(0)
+      .map(
+        () => `
       <article class="support-card skeleton-card" aria-hidden="true">
         <div class="card-top">
           <div class="card-title">
@@ -68,7 +71,9 @@ function showLoadingState() {
           <span class="skeleton skeleton-tag"></span>
         </div>
       </article>
-    `).join('');
+    `
+      )
+      .join('');
   }
 }
 
@@ -101,10 +106,10 @@ async function loadSupportLines() {
     if (grid) {
       grid.innerHTML = `
         <div class="surface-card p-6 md:col-span-2 xl:col-span-3 text-center">
-          <p class="text-lg font-semibold mb-2"><i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Kunde inte ladda stödlinjer</p>
+          <p class="text-lg font-bold mb-2"><i class="fas fas-triangle-exclamation text-amber-500"></i> Kunde inte ladda stödlinjer</p>
           <p class="muted text-sm mb-4">Försök ladda om sidan eller kontakta oss om problemet kvarstår.</p>
           <button onclick="location.reload()" class="category-btn is-active">
-            <i class="fa-solid fa-rotate-right"></i> Ladda om
+            <i class="fas fas-rotate-right"></i> Ladda om
           </button>
         </div>
       `;
@@ -121,20 +126,21 @@ function filterLines() {
   let filtered = state.lines.slice();
 
   if (state.currentCategory !== 'all') {
-    filtered = filtered.filter(line => line.category === state.currentCategory);
+    filtered = filtered.filter((line) => line.category === state.currentCategory);
   }
 
   if (state.currentTag !== 'all') {
-    filtered = filtered.filter(line => line.tags && line.tags.includes(state.currentTag));
+    filtered = filtered.filter((line) => line.tags && line.tags.includes(state.currentTag));
   }
 
   const q = state.searchQuery.trim().toLowerCase();
   if (q) {
-    filtered = filtered.filter(line =>
-      (line.name && line.name.toLowerCase().includes(q)) ||
-      (line.description && line.description.toLowerCase().includes(q)) ||
-      (line.number && line.number.toLowerCase().includes(q)) ||
-      (line.tags && line.tags.some(tag => tag.toLowerCase().includes(q)))
+    filtered = filtered.filter(
+      (line) =>
+        (line.name && line.name.toLowerCase().includes(q)) ||
+        (line.description && line.description.toLowerCase().includes(q)) ||
+        (line.number && line.number.toLowerCase().includes(q)) ||
+        (line.tags && line.tags.some((tag) => tag.toLowerCase().includes(q)))
     );
   }
 
@@ -176,17 +182,17 @@ function renderLines() {
 
   const categoryIcon = (category) => {
     const map = {
-      'psykisk-halsa': '<i class="fa-solid fa-brain"></i>',
-      'barn-unga': '<i class="fa-solid fa-children"></i>',
-      'vald': '<i class="fa-solid fa-shield-halved"></i>',
-      'missbruk': '<i class="fa-solid fa-wine-bottle"></i>',
-      'anhöriga': '<i class="fa-solid fa-people-roof"></i>',
-      'aldre': '<i class="fa-solid fa-person-cane"></i>'
+      psykiskhalsa: '<i class="fas fas-brain"></i>',
+      'barn-unga': '<i class="fas fas-children"></i>',
+      vald: '<i class="fas fas-shield-halved"></i>',
+      missbruk: '<i class="fas fas-wine-bottle"></i>',
+      anhöriga: '<i class="fas fas-people-roof"></i>',
+      aldre: '<i class="fas fas-person-cane"></i>'
     };
-    return map[category] || '<i class="fa-solid fa-life-ring"></i>';
+    return map[category] || '<i class="fas fas-life-ring"></i>';
   };
 
-  filtered.forEach(line => {
+  filtered.forEach((line) => {
     const article = document.createElement('article');
     article.className = 'support-card flex flex-col gap-3 text-slate-900 dark:text-slate-100';
     article.setAttribute('itemscope', '');
@@ -194,7 +200,7 @@ function renderLines() {
 
     // Urgent badge - only rendered once, positioned in top-right corner
     const urgentBadge = line.urgent
-      ? '<span class="badge-urgent badge-urgent-corner" aria-label="Akut"><i class="fa-solid fa-bolt"></i><span>Akut</span></span>'
+      ? '<span class="badge-urgent badge-urgent-corner" aria-label="Akut"><i class="fas fas-bolt"></i><span>Akut</span></span>'
       : '';
 
     const telHref = (line.number || '').toString().replace(/[^+\d]/g, '');
@@ -205,37 +211,46 @@ function renderLines() {
         <div class="card-title">
           <span class="card-icon">${categoryIcon(line.category)}</span>
           <div>
-            <h3 class="text-lg font-semibold mb-1" itemprop="name">
-              ${line.url
-                ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="card-title-link">${line.name}</a>`
-                : line.name}
+            <h3 class="text-lg font-extrabold mb-1" itemprop="name">
+              ${
+                line.url
+                  ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="card-title-link">${line.name}</a>`
+                  : line.name
+              }
             </h3>
-            <div class="card-meta"><i class="fa-regular fa-clock"></i><span itemprop="hoursAvailable">${line.available}</span></div>
+            <div class="card-meta"><i class="far far-clock"></i><span itemprop="hoursAvailable">${
+              line.available
+            }</span></div>
           </div>
         </div>
       </div>
 
-      ${line.number
-        ? `<a href="tel:${telHref}"
+      ${
+        line.number
+          ? `<a href="tel:${telHref}"
              class="card-number"
              itemprop="telephone" aria-label="Ring ${line.name} på ${line.number}">
-            <i class="fa-solid fa-phone"></i>
+            <i class="fas fas-phone"></i>
             <span>${line.number}</span>
           </a>`
-        : ''
+          : ''
       }
 
       <p class="muted leading-relaxed" itemprop="description">${line.description}</p>
 
       <div class="flex-1"></div>
-      ${line.tags && line.tags.length
-        ? `<div class="flex flex-wrap gap-2 mt-2">
-            ${line.tags.map(tag => {
-              const activeClass = state.currentTag === tag ? ' is-active' : '';
-              return `<button class="tag tag-btn${activeClass}" data-tag="${tag}" type="button">#${tag}</button>`;
-            }).join('')}
+      ${
+        line.tags && line.tags.length
+          ? `<div class="flex flex-wrap gap-2 mt-2">
+            ${line.tags
+              .map((tag) => {
+                const activeClass = state.currentTag === tag ? ' is-active' : '';
+                return `<button class="tag tag-btn${activeClass}" data-tag="${tag}" type="button">#${tag}</button>`;
+              })
+              .join('')}
            </div>`
-        : ''}
+          : ''
+      }
     `;
 
     grid.appendChild(article);
@@ -259,12 +274,12 @@ function initFilters() {
     });
   }
 
-  categoryButtons.forEach(button => {
+  categoryButtons.forEach((button) => {
     button.addEventListener('click', () => {
       state.currentCategory = button.dataset.category || 'all';
       state.currentTag = 'all';
 
-      categoryButtons.forEach(btn => {
+      categoryButtons.forEach((btn) => {
         btn.classList.remove('is-active');
         btn.setAttribute('aria-pressed', 'false');
       });
@@ -287,7 +302,7 @@ function initFilters() {
       searchInput.value = '';
       state.searchQuery = '';
     }
-    categoryButtons.forEach(btn => {
+    categoryButtons.forEach((btn) => {
       btn.classList.remove('is-active');
       btn.setAttribute('aria-pressed', 'false');
     });
@@ -301,7 +316,7 @@ function initFilters() {
         searchInput.value = '';
         state.searchQuery = '';
       }
-      categoryButtons.forEach(btn => {
+      categoryButtons.forEach((btn) => {
         btn.classList.remove('is-active');
         btn.setAttribute('aria-pressed', 'false');
       });
@@ -324,7 +339,8 @@ function applyTheme(mode) {
   document.documentElement.classList.toggle('dark', isDark);
 
   if (themeToggle) themeToggle.setAttribute('aria-pressed', isDark.toString());
-  if (themeIcon) themeIcon.innerHTML = isDark ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+  if (themeIcon)
+    themeIcon.innerHTML = isDark ? '<i class="fas fas-moon"></i>' : '<i class="fas fas-sun"></i>';
   if (themeLabel) themeLabel.textContent = isDark ? 'Mörkt läge' : 'Ljust läge';
 
   localStorage.setItem('theme', mode);
@@ -369,9 +385,13 @@ function initUrlSearch() {
 function init() {
   initThemeToggle();
   initQuote();
-  initFilters();
-  initUrlSearch();
-  loadSupportLines();
+
+  const hasListings = document.getElementById('linesGrid');
+  if (hasListings) {
+    initFilters();
+    initUrlSearch();
+    loadSupportLines();
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);
