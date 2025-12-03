@@ -48,7 +48,7 @@
     "number": "020-84 44 48",
     "description": "För dig som funderar över dina eller någon närståendes alkoholvanor och vill få hjälp att förändra dem. Anonym rådgivning av erfarna rådgivare.",
     "category": "missbruk",
-    "available": "Se aktuella tider på webbplatsen",
+    "available": "Se webbplatsen",
     "tags": ["missbruk", "psykiskhalsa", "anhorig", "samtal", "anonymt"]
   },
   {
@@ -68,7 +68,7 @@
     "number": "020-81 91 00",
     "description": "Stöd för dig med spelproblem eller som anhörig. Du får anonym rådgivning, vägledning och hjälp att hitta hållbara strategier framåt.",
     "category": "missbruk",
-    "available": "Se aktuella tider på webbplatsen",
+    "available": "Se webbplatsen",
     "tags": ["missbruk", "psykiskhalsa", "anhorig", "samtal", "anonymt"]
   },
   {
@@ -88,7 +88,7 @@
     "number": "020-50 00 00",
     "description": "Stöd för män som upplever psykisk ohälsa, våld, hot eller livskriser. Anonym rådgivning erbjuds av erfarna stödpersoner alla dagar.",
     "category": "vald",
-    "available": "Mån-fre 12–14 & 18–20, lör 12–14",
+    "available": "Mån-fre 12–14 & 18–20",
     "urgent": true,
     "tags": ["psykiskhalsa", "valdbrott", "killarman", "samtal", "anonymt"]
   },
@@ -160,7 +160,7 @@
     "number": "116 006",
     "description": "Stöd för dig som utsatts för brott, är anhörig eller vittne. Du får anonymt samtalsstöd, praktisk vägledning och hjälp att hitta rätt vidare.",
     "category": "vald",
-    "available": "Se aktuella tider på webbplatsen",
+    "available": "Se webbplatsen",
     "urgent": true,
     "tags": ["valdbrott", "sorgtrauma", "anhorig", "samtal", "anonymt"]
   },
