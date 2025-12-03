@@ -55,7 +55,7 @@
     "id": 6,
     "name": "Anonyma Alkoholister (AA)",
     "url": "https://aa.se/",
-    "number": "",
+    "number": "08-720 38 42",
     "description": "Gemenskap för dig som vill sluta dricka. Möten finns över hela landet och online, med anonymt stöd från andra nyktra alkoholister.",
     "category": "missbruk",
     "available": "Tider varierar – se aa.se",
@@ -198,21 +198,11 @@
     "id": 20,
     "name": "Killar.se",
     "url": "https://killar.se/",
-    "number": "",
+    "number": "0762-65 32 65",
     "description": "Stödchatt för unga som identifierar sig som killar och behöver prata om mående, relationer, våld eller svåra känslor. Allt är helt anonymt.",
     "category": "barn-unga",
     "available": "Se aktuella chatt-tider på killar.se",
     "tags": ["barn-unga", "psykiskhalsa", "killarman", "chatt", "anonymt"]
-  },
-  {
-    "id": 21,
-    "name": "Tjejjouren.se",
-    "url": "https://tjejjouren.se/",
-    "number": "",
-    "description": "Stöd via chatt och mejl för tjejer och unga som behöver prata om våld, övergrepp, psykisk ohälsa eller svåra känslor. Allt är anonymt.",
-    "category": "barn-unga",
-    "available": "Se tjejjouren.se",
-    "tags": ["barn-unga", "psykiskhalsa", "valdbrott", "chatt", "anonymt"]
   },
   {
     "id": 22,

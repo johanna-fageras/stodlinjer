@@ -16,7 +16,7 @@ Alla stödlinjer som listas är seriösa aktörer som erbjuder anonymt, kostnads
 
 ## ✨ Funktioner
 
-- 🔍 **Sökbar lista** med 22+ svenska stödlinjer
+- 🔍 **Sökbar lista** med 21+ svenska stödlinjer
 - 🏷️ **Kategorifiltrering** — psykisk hälsa, barn & unga, våld, missbruk, anhöriga, äldre
 - #️⃣ **Taggfiltrering** för detaljerad sökning
 - 🌓 **Ljust/mörkt tema** med automatisk systempreferens
@@ -35,7 +35,7 @@ stodlinjer/
 ├── anhoriga.html              # Sida för anhöriga och närstående
 ├── kontakt.html               # Kontaktformulär och info
 ├── data/
-│   ├── support-lines.json     # All data för stödlinjer (22+ linjer)
+│   ├── support-lines.json     # All data för stödlinjer (21+ linjer)
 │   └── quotes.json            # Motiverande citat
 ├── assets/
 │   ├── css/
