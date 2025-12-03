@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'Font Awesome';
-  src: url('../fonts/fa-regular-400.eot');
-  src: url('../fonts/fa-regular-400.eot') format('embedded-opentype'),
-    url('../fonts/fa-regular-400.woff2') format('woff2'),
-    url('../fonts/fa-regular-400.woff') format('woff'),
-    url('../fonts/fa-regular-400.ttf') format('truetype'),
-    url('../fonts/fa-regular-400.svg') format('svg');
+  src: url('../fonts/fa/fa-regular-400.eot');
+  src: url('../fonts/fa/fa-regular-400.eot') format('embedded-opentype'),
+    url('../fonts/fa/fa-regular-400.woff2') format('woff2'),
+    url('../fonts/fa/fa-regular-400.woff') format('woff'),
+    url('../fonts/fa/fa-regular-400.ttf') format('truetype'),
+    url('../fonts/fa/fa-regular-400.svg') format('svg');
   font-weight: 400;
   font-display: block;
   font-style: normal;
