@@ -1,4 +1,9 @@
 // ==========================================================================
+// Base URL (set by template, defaults to '' for local dev)
+// ==========================================================================
+const BASE_URL = window.BASE_URL || '';
+
+// ==========================================================================
 // Motivational Quotes
 // ==========================================================================
 
@@ -9,8 +14,7 @@ async function initQuote() {
   if (!quoteEl || !authorEl) return;
 
   try {
-    // Use relative path - works with <base> tag
-    const res = await fetch('data/quotes.json', { cache: 'no-cache' });
+    const res = await fetch(`${BASE_URL}/data/quotes.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error('Could not load quotes');
     const quotes = await res.json();
 
@@ -90,8 +94,7 @@ async function loadSupportLines() {
   showLoadingState();
 
   try {
-    // Use relative path - works with <base> tag
-    const res = await fetch('data/support-lines.json', { cache: 'no-cache' });
+    const res = await fetch(`${BASE_URL}/data/support-lines.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`Kunde inte ladda data (${res.status})`);
     state.lines = await res.json();
     hideLoadingState();
