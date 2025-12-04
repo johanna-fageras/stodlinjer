@@ -9,7 +9,7 @@
 {% if keywords %}
   <meta name="keywords" content="{{ keywords }}" />
 {% endif %}
-<link rel="canonical" href="{{ site.url }}{{ page.url | url }}" />
+<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 <meta name="color-scheme" content="{{ site.colorScheme }}" />
 <meta name="theme-color" content="{{ site.themeColor }}" />
 <!-- Prevent theme flash: set theme class before paint -->
@@ -22,6 +22,6 @@
     if (t === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
-<script src="{{ '/assets/js/tailwind-config.js' | url }}"></script>
+<script src="/assets/js/tailwind-config.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" />
+<link rel="stylesheet" href="/assets/css/main.css" />
