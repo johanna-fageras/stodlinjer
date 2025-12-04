@@ -2,7 +2,7 @@
 <header class="header-shell">
   <div class="header-inner">
     <div class="header-brand">
-      <a class="brand-mark" aria-label="Till startsidan" href="{{ baseUrl }}/">
+      <a class="brand-mark" aria-label="Till startsidan" href="{{ '/' | url }}">
         <i class="{{ h.icon }}" aria-hidden="true"></i>
       </a>
       <div class="header-text">
@@ -19,7 +19,7 @@
     <div class="header-actions">
       {% if h.links %}
         {% for link in h.links %}
-          <a href="{{ baseUrl }}{{ link.url }}" class="header-link" aria-label="{{ link.aria }}">
+          <a href="{{ link.url | url }}" class="header-link" aria-label="{{ link.aria }}">
             <i class="{{ link.icon }}"></i><span>{{ link.text }}</span>
           </a>
         {% endfor %}

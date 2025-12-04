@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "build:local": "ELEVENTY_PATH_PREFIX=/ npx @11ty/eleventy",
-    "serve": "ELEVENTY_PATH_PREFIX=/ npx @11ty/eleventy --serve",
+    "serve": "npx @11ty/eleventy --serve",
     "start": "npm run serve"
   },
   "keywords": [
