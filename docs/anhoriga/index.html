@@ -25,9 +25,10 @@
     if (t === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
-<script src="/stodlinjer/assets/js/tailwind-config.js"></script>
+<script>window.BASE_URL = '';</script>
+<script src="/assets/js/tailwind-config.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="/stodlinjer/assets/css/main.css" />
+<link rel="stylesheet" href="/assets/css/main.css" />
 
   </head>
 
@@ -44,7 +45,7 @@
 <header class="header-shell">
   <div class="header-inner">
     <div class="header-brand">
-      <a class="brand-mark" aria-label="Till startsidan" href="/stodlinjer/">
+      <a class="brand-mark" aria-label="Till startsidan" href="/">
         <i class="fas fas-heart" aria-hidden="true"></i>
       </a>
       <div class="header-text">
@@ -61,11 +62,11 @@
     <div class="header-actions">
       
         
-          <a href="/stodlinjer/" class="header-link" aria-label="Till startsidan">
+          <a href="/" class="header-link" aria-label="Till startsidan">
             <i class="fas fas-house"></i><span>Startsida</span>
           </a>
         
-          <a href="/stodlinjer/kontakt/" class="header-link" aria-label="Kontakta oss">
+          <a href="/kontakt/" class="header-link" aria-label="Kontakta oss">
             <i class="fas fas-envelope-open-text"></i><span>Kontakt</span>
           </a>
         
@@ -444,6 +445,6 @@
 </footer>
 
 
-    <script type="module" src="/stodlinjer/assets/js/app.js"></script>
+    <script type="module" src="/assets/js/app.js"></script>
   </body>
 </html>
