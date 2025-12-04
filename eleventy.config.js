@@ -1,5 +1,7 @@
-// Allow overriding the deployed subfolder. Default to GitHub Pages project path, set PATH_PREFIX=/ for root/custom domain.
-const pathPrefix = (process.env.PATH_PREFIX || '/stodlinjer').replace(/\/?$/, '/');
+// Allow overriding the deployed subfolder.
+// Default to root ('/'); set PATH_PREFIX=/stodlinjer for GitHub project pages.
+const pathPrefixEnv = process.env.PATH_PREFIX || '/';
+const pathPrefix = pathPrefixEnv.endsWith('/') ? pathPrefixEnv : `${pathPrefixEnv}/`;
 const baseUrl = pathPrefix === '/' ? '' : pathPrefix.replace(/\/$/, '');
 
 module.exports = function (eleventyConfig) {
