@@ -1,5 +1,7 @@
 const isLocal = process.env.LOCAL === '1';
-const pathPrefix = isLocal ? '/' : '/stodlinjer/';
+// Allow overriding the deployed subfolder. Default to root ('/'), set PATH_PREFIX=/stodlinjer for GitHub project pages.
+const pathPrefix = process.env.PATH_PREFIX || '/';
+const baseUrl = pathPrefix === '/' ? '' : pathPrefix.replace(/\/$/, '');
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
@@ -7,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/_data': 'data' });
 
   // Make baseUrl available in templates
-  eleventyConfig.addGlobalData('baseUrl', isLocal ? '' : '/stodlinjer');
+  eleventyConfig.addGlobalData('baseUrl', baseUrl);
 
   return {
     pathPrefix,
