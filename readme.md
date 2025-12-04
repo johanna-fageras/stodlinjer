@@ -8,9 +8,9 @@ En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på e
 
 ## 💡 Om projektet
 
-Ibland känns livet övermäktigt. Det kan handla om ångest, depression, ensamhet, våld, missbruk eller oro för någon annan. Stödlinjer.se samlar Sveriges viktigaste stödlinjer på ett ställe — så att du snabbt kan hitta rätt nummer att ringa eller chatt att skriva till.
+Ibland känns livet övermäktigt. Det kan handla om ångest, depression, ensamhet, våld, missbruk eller oro för någon annan. Stödlinjer.se samlar Sveriges viktigaste stödlinjer på ett ställe — så att du snabbt kan hitta rätt nummer att ringa eller chatt att skriva till. Alla stödlinjer som listas är seriösa aktörer som erbjuder anonymt, kostnadsfritt stöd.
 
-Alla stödlinjer som listas är seriösa aktörer som erbjuder anonymt, kostnadsfritt stöd.
+Byggt med **Eleventy (11ty)** och Nunjucks-mallar, med data i JSON-filer under `src/_data/`.
 
 ---
 
@@ -27,58 +27,54 @@ Alla stödlinjer som listas är seriösa aktörer som erbjuder anonymt, kostnads
 
 ---
 
-## 📁 Projektstruktur
+## 📦 Installation & scripts
 
+Kräver Node 18+.
+
+```bash
+npm install
 ```
-stodlinjer/
-├── index.html                 # Startsida med sökning och alla stödlinjer
-├── anhoriga.html              # Sida för anhöriga och närstående
-├── kontakt.html               # Kontaktformulär och info
-├── data/
-│   ├── support-lines.json     # All data för stödlinjer (21+ linjer)
-│   └── quotes.json            # Motiverande citat
-├── assets/
-│   ├── css/
-│   │   ├── base.css           # Grundstilar, CSS-variabler, typografi
-│   │   └── components.css     # Komponentstilar (kort, knappar, header, footer)
-│   ├── js/
-│   │   ├── app.js             # Huvudapplikationslogik (sökning, filtrering, tema)
-│   │   └── tailwind-config.js # Tailwind CDN-konfiguration
-│   ├── fonts/                 # Font Awesome ikonfiler
-│   └── imgs/
-│       └── og-image-generator.html
-└── README.md
+
+Lokalt utvecklingsläge med live-reload:
+
+```bash
+npm run serve
+```
+
+Bygg statisk sajt (till `docs/`, konfigurerat för GitHub Pages):
+
+```bash
+npm run build
 ```
 
 ---
 
-## 🛠️ Teknisk stack
+## 📁 Projektstruktur (Eleventy)
 
-| Teknik                 | Användning                                                |
-| ---------------------- | --------------------------------------------------------- |
-| **HTML5**              | Semantisk markup med Schema.org strukturerade data        |
-| **Tailwind CSS**       | Via CDN med anpassad konfiguration                        |
-| **Athletics**          | Premium typsnitt från Family Type för modern, varm känsla |
-| **GT Pressura**        | Monospace-typsnitt för telefonnummer                      |
-| **Font Awesome**       | Ikoner (lokalt hostade)                                   |
-| **Vanilla JavaScript** | ES6+ för interaktivitet, ingen build-process              |
+```
+src/
+├── index.njk               # Startsida (sök + grid)
+├── anhoriga.njk            # Sida för anhöriga
+├── kontakt.njk             # Kontaktformulär
+├── _data/
+│   ├── support-lines.json  # Alla stödlinjer
+│   └── quotes.json         # Motiverande citat
+├── _includes/
+│   ├── layouts/base.njk
+│   └── partials/           # Header, footer, sektioner m.m.
+└── assets/
+    ├── css/                # base.css, main.css (+ komponent-partials)
+    ├── js/                 # app.js, tailwind-config.js
+    └── fonts/              # Ikon- och typsnitts-filer
+```
 
----
-
-## 📞 Akuta nummer
-
-| Linje                        | Nummer     | När               |
-| ---------------------------- | ---------- | ----------------- |
-| 🚨 **SOS Alarm**             | 112        | Akut fara för liv |
-| 💚 **Mind Självmordslinjen** | 90101      | Dygnet runt       |
-| 🛡️ **Kvinnofridslinjen**     | 020-505050 | Dygnet runt       |
-| 📞 **Hjälplinjen**           | 90390      | Dygnet runt       |
+Output: `docs/` (Eleventy skriver färdiga HTML-filer och kopierar assets).
 
 ---
 
 ## ➕ Lägg till eller ändra stödlinjer
 
-All data finns i `data/support-lines.json`. Varje stödlinje följer detta format:
+All data finns i `src/_data/support-lines.json`. Varje stödlinje följer detta format:
 
 ```json
 {
@@ -109,6 +105,17 @@ All data finns i `data/support-lines.json`. Varje stödlinje följer detta forma
 
 `akut`, `psykiskhalsa`, `suicid`, `samtal`, `chatt`, `anonymt`, `valdbrott`, `sorgtrauma`, `anhorig`, `missbruk`, `barn-unga`, `killarman`, `hbtqi`, `stodgrupp`
 
+### Lägg till citat
+
+`src/_data/quotes.json` innehåller citatobjekt:
+
+```json
+{
+  "text": "Det kommer en dag till.",
+  "author": "Okänd"
+}
+```
+
 ---
 
 ## 🎨 Design
@@ -124,9 +131,7 @@ Webbplatsen använder ett varmt, lugnt färgschema med fokus på tillgänglighet
 
 ## 🚀 Publicering
 
-Sidan publiceras via **GitHub Pages** på domänen [stodlinjer.se](https://stodlinjer.se).
-
-För att köra lokalt, öppna bara `index.html` i en webbläsare — ingen build-process krävs.
+Konfigurerad för **GitHub Pages** genom att bygga till `docs/`. Kör `npm run build` och pusha — Pages serverar innehållet direkt från `docs/`.
 
 ---
 
