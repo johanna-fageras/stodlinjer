@@ -1,8 +1,4 @@
-// Allow overriding the deployed subfolder.
-// Default to GitHub Pages project path; set PATH_PREFIX=/ for root/custom domain.
-const pathPrefixEnv = process.env.PATH_PREFIX || '/stodlinjer/';
-const pathPrefix = pathPrefixEnv.endsWith('/') ? pathPrefixEnv : `${pathPrefixEnv}/`;
-const baseUrl = pathPrefix === '/' ? '' : pathPrefix.replace(/\/$/, '');
+const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
@@ -10,7 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/_data': 'data' });
 
   // Make baseUrl available in templates
-  eleventyConfig.addGlobalData('baseUrl', baseUrl);
+  eleventyConfig.addGlobalData('baseUrl', pathPrefix === '/' ? '' : pathPrefix);
 
   return {
     pathPrefix,
