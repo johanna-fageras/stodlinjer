@@ -1,4 +1,36 @@
 // ==========================================================================
+// Base Path Detection (for GitHub Pages subdirectory deployment)
+// ==========================================================================
+
+// Detect the base path from the current script location or document base
+function getBasePath() {
+  // Try to get from <base> tag if present
+  const baseTag = document.querySelector('base');
+  if (baseTag && baseTag.href) {
+    const url = new URL(baseTag.href);
+    return url.pathname.replace(/\/$/, '');
+  }
+  
+  // Fallback: detect from current script src
+  const scripts = document.querySelectorAll('script[src*="app.js"]');
+  for (const script of scripts) {
+    const src = script.getAttribute('src');
+    if (src) {
+      // Extract base path (everything before /assets/)
+      const match = src.match(/^(.*?)\/assets\//);
+      if (match) {
+        return match[1] || '';
+      }
+    }
+  }
+  
+  // Default: assume root if detection fails
+  return '';
+}
+
+const BASE_PATH = getBasePath();
+
+// ==========================================================================
 // Motivational Quotes
 // ==========================================================================
 
@@ -9,7 +41,7 @@ async function initQuote() {
   if (!quoteEl || !authorEl) return;
 
   try {
-    const res = await fetch('/data/quotes.json', { cache: 'no-cache' });
+    const res = await fetch(`${BASE_PATH}/data/quotes.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error('Could not load quotes');
     const quotes = await res.json();
 
@@ -89,7 +121,7 @@ async function loadSupportLines() {
   showLoadingState();
 
   try {
-    const res = await fetch('/data/support-lines.json', { cache: 'no-cache' });
+    const res = await fetch(`${BASE_PATH}/data/support-lines.json`, { cache: 'no-cache' });
     if (!res.ok) throw new Error(`Kunde inte ladda data (${res.status})`);
     state.lines = await res.json();
     hideLoadingState();
