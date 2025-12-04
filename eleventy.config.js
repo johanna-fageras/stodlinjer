@@ -1,7 +1,6 @@
-// pathPrefix: Set via environment variable
-// - Local dev (npm run serve): Uses '/' (root)
-// - GitHub Pages (npm run build): Uses '/stodlinjer'
-const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
+// Set to '/stodlinjer' for GitHub Pages, or '/' for custom domain/local
+const isProduction = process.env.NODE_ENV === 'production' || process.env.ELEVENTY_PATH_PREFIX;
+const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || (isProduction ? '/stodlinjer' : '/');
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
