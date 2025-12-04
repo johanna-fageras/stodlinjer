@@ -4,7 +4,7 @@
     {% include "partials/head.njk" %}
   </head>
 
-  <body class="min-h-screen flex flex-col page-shell">
+  <body class="min-h-screen flex flex-col page-shell {{ pageClass | default('') }}">
     <!-- Skip link -->
     <a
       href="#main"

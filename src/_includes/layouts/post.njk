@@ -1,0 +1,68 @@
+{% extends "layouts/base.njk" %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+  {% set samlingInfo = (samling | getSamling) or { title: samling, icon: 'fas fas-folder' } %}
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <article class="surface-card strong-card post-shell">
+      <div class="post-header">
+        {% if samling %}
+          <a
+            class="samling-chip samling-chip-large"
+            href="{{ baseUrl }}/samlingar/{{ samling }}/"
+            aria-label="Visa samlingen {{ samlingInfo.title }}"
+          >
+            <i class="{{ samlingInfo.icon or 'fas fas-folder' }}"></i>
+            <span>{{ samlingInfo.title }}</span>
+          </a>
+        {% endif %}
+
+        <h1 class="post-title">{{ title }}</h1>
+        <p class="post-meta">
+          <span><i class="far far-calendar"></i> {{ date | formatDate }}</span>
+          {% if samling %}
+            <span>• Samling: <a href="{{ baseUrl }}/samlingar/{{ samling }}/">{{ samlingInfo.title }}</a></span>
+          {% endif %}
+          {% if postTags %}
+            <span>• {{ postTags | length }} taggar</span>
+          {% endif %}
+        </p>
+
+        {% if description %}
+          <p class="post-lead">{{ description }}</p>
+        {% endif %}
+      </div>
+
+      <div class="post-content">
+        {{ content | safe }}
+      </div>
+
+      {% if postTags %}
+        <div class="post-tags">
+          <div class="post-tag-list">
+            {% for tag in postTags %}
+              <span class="article-tag">#{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if references %}
+        <div class="post-references">
+          <p class="muted text-xs uppercase tracking-wide flex items-center gap-2">
+            <i class="fas fas-book" aria-hidden="true"></i> Referenser
+          </p>
+          <ol class="reference-list">
+            {% for ref in references %}
+              <li>{{ ref }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+      {% endif %}
+    </article>
+  </section>
+{% endblock %}

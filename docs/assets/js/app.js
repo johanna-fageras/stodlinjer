@@ -331,6 +331,51 @@ function initFilters() {
 }
 
 // ==========================================================================
+// Article filtering (Samling)
+// ==========================================================================
+
+function initArticleFilters() {
+  const grid = document.querySelector('[data-article-grid]');
+  const filterButtons = Array.from(document.querySelectorAll('[data-samling-filter]'));
+
+  if (!grid || !filterButtons.length) return;
+
+  const cards = Array.from(grid.querySelectorAll('[data-samling-item]'));
+  const counter = document.getElementById('articleCount');
+
+  const applyFilter = (value) => {
+    let visibleCount = 0;
+
+    filterButtons.forEach((btn) => {
+      const isActive = btn.dataset.samlingFilter === value;
+      btn.classList.toggle('is-active', isActive);
+      btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+
+    cards.forEach((card) => {
+      const matches = value === 'all' || card.dataset.samlingItem === value;
+      card.classList.toggle('hidden', !matches);
+      if (matches) visibleCount += 1;
+    });
+
+    if (counter) {
+      const total = cards.length;
+      counter.textContent = `Visar ${visibleCount} av ${total} artiklar`;
+    }
+  };
+
+  const initial = filterButtons.find((btn) => btn.classList.contains('is-active'));
+  applyFilter(initial ? initial.dataset.samlingFilter || 'all' : 'all');
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      applyFilter(btn.dataset.samlingFilter || 'all');
+    });
+  });
+}
+
+// ==========================================================================
 // Theme Toggle
 // ==========================================================================
 
@@ -390,6 +435,7 @@ function initUrlSearch() {
 function init() {
   initThemeToggle();
   initQuote();
+  initArticleFilters();
 
   const hasListings = document.getElementById('linesGrid');
   if (hasListings) {
