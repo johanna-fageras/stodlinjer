@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "serve": "npx @11ty/eleventy --serve",
+    "serve": "LOCAL=1 npx @11ty/eleventy --serve",
     "start": "npm run serve"
   },
   "keywords": [

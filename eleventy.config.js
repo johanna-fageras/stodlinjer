@@ -1,10 +1,12 @@
+const pathPrefix = process.env.LOCAL ? '/' : '/stodlinjer/';
+
 module.exports = function (eleventyConfig) {
-  // Copy static assets (css, fonts, js) as-is to the output folder.
+  // Copy static assets
   eleventyConfig.addPassthroughCopy('src/assets');
-  // Expose data files to the client for fetch requests (while still usable as Eleventy data).
   eleventyConfig.addPassthroughCopy({ 'src/_data': 'data' });
 
   return {
+    pathPrefix,
     dir: {
       input: 'src',
       output: 'docs'
