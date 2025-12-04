@@ -1,6 +1,7 @@
-// Set to '/stodlinjer' for GitHub Pages, or '/' for custom domain/local
-const isProduction = process.env.NODE_ENV === 'production' || process.env.ELEVENTY_PATH_PREFIX;
-const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || (isProduction ? '/stodlinjer' : '/');
+// Path prefix for GitHub Pages deployment
+// When deploying to github.io/stodlinjer/, set pathPrefix to '/stodlinjer'
+// For local development or custom domains, use '/'
+const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/stodlinjer';
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
@@ -8,6 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ 'src/_data': 'data' });
 
   // Make pathPrefix available in templates as a global variable
+  // For GitHub Pages: baseUrl = '/stodlinjer'
+  // For root deployment: baseUrl = '' (empty string)
   eleventyConfig.addGlobalData('baseUrl', pathPrefix === '/' ? '' : pathPrefix);
 
   return {
