@@ -1,36 +1,26 @@
-// Default to GitHub Pages project path; override with ELEVENTY_PATH_PREFIX=/ for root/custom domains.
+// For GitHub Pages deployment at /stodlinjer/ subdirectory
+// For local testing, open docs/index.html directly in browser
+// For custom domain at root, set ELEVENTY_PATH_PREFIX=/
+
 const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/stodlinjer';
 
 module.exports = function (eleventyConfig) {
-  // Copy static assets (css, fonts, js) as-is to the output folder.
-  // Note: The passthrough copy destination must NOT include pathPrefix - 
-  // Eleventy handles that automatically for passthrough copies.
+  // Copy static assets
   eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' });
-  
-  // Expose data files to the client for fetch requests (while still usable as Eleventy data).
   eleventyConfig.addPassthroughCopy({ 'src/_data': 'data' });
 
-  // Override the default url filter to ensure pathPrefix is always applied
-  eleventyConfig.addFilter('url', function (url) {
+  // Make pathPrefix available in templates
+  eleventyConfig.addGlobalData('pathPrefix', pathPrefix);
+
+  // Simple url filter - just ensures leading slash, doesn't add prefix
+  // The <base> tag in head.njk handles the prefix
+  eleventyConfig.addFilter('toAbsolute', function (url) {
     if (!url) return url;
-    
-    // If URL is already absolute (http/https) or a hash/tel/mailto link, return as-is
-    if (url.startsWith('http') || url.startsWith('#') || url.startsWith('tel:') || url.startsWith('mailto:')) {
+    if (url.startsWith('http') || url.startsWith('//') || url.startsWith('#') || 
+        url.startsWith('tel:') || url.startsWith('mailto:')) {
       return url;
     }
-    
-    // Normalize the URL to start with /
-    let normalizedUrl = url.startsWith('/') ? url : '/' + url;
-    
-    // Apply pathPrefix
-    if (pathPrefix && pathPrefix !== '/') {
-      // Avoid double prefixing
-      if (!normalizedUrl.startsWith(pathPrefix)) {
-        normalizedUrl = pathPrefix + normalizedUrl;
-      }
-    }
-    
-    return normalizedUrl;
+    return url.startsWith('/') ? url : '/' + url;
   });
 
   return {

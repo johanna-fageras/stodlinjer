@@ -12,9 +12,11 @@
 
   <meta name="keywords" content="kontakt, stödlinjer, feedback, tips, uppdatering, förslag, info@stodlinjer.se" />
 
-<link rel="canonical" href="https://stodlinjer.se/stodlinjer/kontakt/" />
+<link rel="canonical" href="https://stodlinjer.se/kontakt/" />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#0f1724" />
+<!-- Base href for all relative URLs - works on GitHub Pages and locally -->
+<base href="//" />
 <!-- Prevent theme flash: set theme class before paint -->
 <script>
   (function () {
@@ -25,9 +27,9 @@
     if (t === 'dark') document.documentElement.classList.add('dark');
   })();
 </script>
-<script src="/stodlinjer/assets/js/tailwind-config.js"></script>
+<script src="assets/js/tailwind-config.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="/stodlinjer/assets/css/main.css" />
+<link rel="stylesheet" href="assets/css/main.css" />
 
   </head>
 
@@ -44,7 +46,7 @@
 <header class="header-shell">
   <div class="header-inner">
     <div class="header-brand">
-      <a class="brand-mark" aria-label="Till startsidan" href="/stodlinjer/">
+      <a class="brand-mark" aria-label="Till startsidan" href="./">
         <i class="fas fas-envelope-open-text" aria-hidden="true"></i>
       </a>
       <div class="header-text">
@@ -61,11 +63,11 @@
     <div class="header-actions">
       
         
-          <a href="/stodlinjer/" class="header-link" aria-label="Till startsidan">
+          <a href="/" class="header-link" aria-label="Till startsidan">
             <i class="fas fas-house"></i><span>Startsida</span>
           </a>
         
-          <a href="/stodlinjer/anhoriga/" class="header-link" aria-label="Till sidan för anhöriga">
+          <a href="/anhoriga/" class="header-link" aria-label="Till sidan för anhöriga">
             <i class="fas fas-people-roof"></i><span>Anhörig</span>
           </a>
         
@@ -295,7 +297,7 @@
         <a class="footer-link" href="#filter-heading"
           ><i class="fas fas-magnifying-glass"></i> Sök stödlinjer</a
         >
-        <a class="footer-link" href="/stodlinjer/anhoriga/"
+        <a class="footer-link" href="anhoriga/"
           ><i class="fas fas-people-roof"></i> För anhöriga</a
         >
         <a class="footer-link" href="tel:112"
@@ -304,7 +306,7 @@
         <a class="footer-link" href="tel:90101"
           ><i class="fas fas-phone-volume"></i> Självmordslinjen 90101</a
         >
-        <a class="footer-link" href="/stodlinjer/kontakt/"
+        <a class="footer-link" href="kontakt/"
           ><i class="fas fas-envelope-open-text"></i> Kontakta oss</a
         >
       </div>
@@ -313,6 +315,6 @@
 </footer>
 
 
-    <script type="module" src="/stodlinjer/assets/js/app.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
   </body>
 </html>
