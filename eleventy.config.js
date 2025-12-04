@@ -1,4 +1,5 @@
-const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
+// Default to GitHub Pages project path; override with ELEVENTY_PATH_PREFIX=/ for root/custom domains.
+const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/stodlinjer';
 
 module.exports = function (eleventyConfig) {
   // Copy static assets (css, fonts, js) as-is to the output folder.
