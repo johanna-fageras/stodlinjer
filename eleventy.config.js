@@ -1,6 +1,6 @@
 // Allow overriding the deployed subfolder.
-// Default to root ('/'); set PATH_PREFIX=/stodlinjer for GitHub project pages.
-const pathPrefixEnv = process.env.PATH_PREFIX || '/';
+// Default to GitHub Pages project path; set PATH_PREFIX=/ for root/custom domain.
+const pathPrefixEnv = process.env.PATH_PREFIX || '/stodlinjer/';
 const pathPrefix = pathPrefixEnv.endsWith('/') ? pathPrefixEnv : `${pathPrefixEnv}/`;
 const baseUrl = pathPrefix === '/' ? '' : pathPrefix.replace(/\/$/, '');
 
