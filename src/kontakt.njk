@@ -1,0 +1,203 @@
+---
+title: Kontakt | Stödlinjer Sverige
+description: >-
+  Hör av dig med rättelser, nya stödlinjer eller feedback. Fyll i formuläret eller maila info@stodlinjer.se.
+keywords: >-
+  kontakt, stödlinjer, feedback, tips, uppdatering, förslag, info@stodlinjer.se
+permalink: "/kontakt/"
+header:
+  icon: "fas fas-envelope-open-text"
+  label: "Kontakt"
+  title: "Hör av dig till oss"
+  subtitle: "Tips, rättelser eller samarbeten? Skriv några rader."
+  links:
+    - url: "/"
+      icon: "fas fas-house"
+      text: "Startsida"
+      aria: "Till startsidan"
+    - url: "/anhoriga/"
+      icon: "fas fas-people-roof"
+      text: "Anhörig"
+      aria: "Till sidan för anhöriga"
+---
+
+{% extends "layouts/base.njk" %}
+{% from "partials/sections/quote.njk" import quoteSection %}
+
+{% block header %}
+  {% include "partials/header.njk" %}
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+        <div class="hero-grid">
+          <div class="surface-card strong-card p-6 sm:p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="pill"><i class="fas fas-envelope-circle-check"></i> Hör av dig</span>
+              <span class="stat-chip"><i class="far far-clock"></i> Svar inom 1-2 dagar</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-slate-900 dark:text-white">
+              Skicka ett meddelande
+            </h2>
+            <p class="text-lg muted mb-6">
+              Berätta kort vad du behöver hjälp med. Vi svarar så snart vi kan och sparar inget
+              utöver ditt meddelande.
+            </p>
+
+            <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="contactName"
+                    >Ditt namn <span class="label-optional">(valfritt)</span></label
+                  >
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="För- och efternamn"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="contactEmail"
+                    >E-post <span class="required-dot" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="din@adress.se"
+                    required
+                  />
+                  <span class="form-helper">Används bara för att svara dig tillbaka.</span>
+                </div>
+                <div class="form-field">
+                  <label for="contactTopic">Ämne</label>
+                  <select id="contactTopic" name="topic">
+                    <option value="update">Rätta eller uppdatera en stödlinje</option>
+                    <option value="new-line">Lägga till en ny stödlinje</option>
+                    <option value="technical">Tekniskt problem</option>
+                    <option value="collab">Samarbete eller press</option>
+                    <option value="other">Övrigt</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="contactChannel">Hur vill du bli kontaktad?</label>
+                  <select id="contactChannel" name="preferred_channel">
+                    <option value="email">E-post</option>
+                    <option value="phone">Telefon (ange nummer i meddelandet)</option>
+                    <option value="no-response">Jag behöver inget svar</option>
+                  </select>
+                </div>
+                <div class="form-field form-full">
+                  <label for="contactMessage"
+                    >Meddelande <span class="required-dot" aria-hidden="true">*</span></label
+                  >
+                  <textarea
+                    id="contactMessage"
+                    name="message"
+                    rows="5"
+                    placeholder="Beskriv kort vad du vill tipsa om, rätta eller fråga."
+                    required
+                  ></textarea>
+                </div>
+                <div class="form-foot form-full">
+                  <label class="form-checkbox">
+                    <input type="checkbox" name="ok_to_follow_up" value="yes" />
+                    Jag godkänner att du sparar mina uppgifter för att kunna svara.
+                  </label>
+                  <p class="form-note">
+                    Ingen spårning eller onödiga cookies. Behöver du akut hjälp? Ring
+                    <a href="tel:112" class="inline-link">112</a> eller
+                    <a href="tel:90101" class="inline-link">90101</a>.
+                  </p>
+                </div>
+              </div>
+              <button type="submit" class="form-submit">
+                <i class="fas fas-paper-plane"></i> Skicka meddelande
+              </button>
+              <p class="form-disclaimer">
+                Formuläret kan kopplas till t.ex. Formspree – byt ut <code>your-form-id</code> i
+                <code>action</code> när du väljer tjänst.
+              </p>
+            </form>
+          </div>
+
+          <div class="surface-card p-6 sm:p-7 flex flex-col gap-4">
+            <div class="pill w-fit"><i class="fas fas-compass"></i> Snabb info</div>
+            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Andra sätt att nå oss</h3>
+            <div class="flex flex-col gap-3 text-sm sm:text-base">
+              <div class="contact-row">
+                <span class="card-icon" aria-hidden="true"><i class="fas fas-envelope"></i></span>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white mb-1">Maila direkt</p>
+                  <p class="muted mb-1">info@stodlinjer.se</p>
+                  <a href="mailto:info@stodlinjer.se" class="inline-link"
+                    ><i class="fas fas-paper-plane"></i> Öppna mail</a
+                  >
+                </div>
+              </div>
+              <div class="contact-row">
+                <span class="card-icon" aria-hidden="true"
+                  ><i class="fas fas-shield-heart"></i
+                ></span>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white mb-1">Akut hjälp</p>
+                  <p class="muted mb-1">
+                    Vid fara för liv: ring 112. Vid självmordstankar: ring 90101.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <a href="tel:112" class="badge-urgent"
+                      ><i class="fas fas-triangle-exclamation"></i> 112</a
+                    >
+                    <a href="tel:90101" class="tag">90101 Självmordslinjen</a>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-row">
+                <span class="card-icon" aria-hidden="true"
+                  ><i class="fas fas-clipboard-check"></i
+                ></span>
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white mb-1">
+                    Vad som händer sen
+                  </p>
+                  <p class="muted mb-1">
+                    Vi läser alla meddelanden, prioriterar rättelser och publicerar uppdateringar så
+                    snabbt som möjligt.
+                  </p>
+                  <p class="muted text-xs mb-0">
+                    Dela gärna källor eller länkar för snabbare hantering.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote -->
+      {{ quoteSection() }}
+
+      <!-- Info Block -->
+      <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
+        <div class="surface-card p-6 sm:p-8">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+            Varför vi ber om detaljer
+          </h2>
+          <p class="muted leading-relaxed mb-3">
+            Ju mer exakt du beskriver linjen eller felet, desto snabbare kan vi uppdatera sidan och
+            hjälpa fler. Länka gärna till officiella källor eller skriv tider/nummer som ändrats.
+          </p>
+          <p class="muted leading-relaxed mb-3">
+            Vi är en ideell infosida och sparar inga uppgifter längre än nödvändigt för att svara på
+            ditt ärende.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="stat-chip"><i class="fas fas-lock"></i> Ingen spårning</span>
+            <span class="stat-chip"><i class="fas fas-users"></i> Community-driven</span>
+            <span class="stat-chip"><i class="fas fas-heart"></i> Tack för din hjälp</span>
+          </div>
+        </div>
+      </article>
+{% endblock %}
