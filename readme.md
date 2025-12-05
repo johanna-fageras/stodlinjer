@@ -17,7 +17,7 @@ Byggt med **Eleventy (11ty)** och Nunjucks-mallar, med data i JSON-filer under `
 ## ✨ Funktioner
 
 - 🔍 **Sökbar lista** med 21+ svenska stödlinjer
-- 🏷️ **Kategorifiltrering** — psykisk hälsa, barn & unga, våld, missbruk, anhöriga, äldre
+ - 🏷️ **Kategorifiltrering** — psykisk hälsa, barn & unga, våld, missbruk, äldre
 - #️⃣ **Taggfiltrering** för detaljerad sökning
 - 🌓 **Ljust/mörkt tema** med automatisk systempreferens
 - 🔗 **URL-baserad sökning** (`?q=sökterm`) för delning och schema.org SearchAction
@@ -54,7 +54,6 @@ npm run build
 ```
 src/
 ├── index.njk               # Startsida (sök + grid)
-├── anhoriga.njk            # Sida för anhöriga
 ├── kontakt.njk             # Kontaktformulär
 ├── _data/
 │   ├── support-lines.json  # Alla stödlinjer
@@ -98,7 +97,6 @@ All data finns i `src/_data/support-lines.json`. Varje stödlinje följer detta 
 | 👶 Barn & unga         | `barn-unga`    |
 | 🛡️ Våld & utsatthet    | `vald`         |
 | 🍷 Missbruk & beroende | `missbruk`     |
-| 👨‍👩‍👧 Anhöriga            | `anhoriga`     |
 | 🧓 Äldre               | `aldre`        |
 
 ### Tillgängliga taggar
