@@ -3,13 +3,6 @@ title: Hur gör jag när jag vill hjälpa någon som mår dåligt men inte vet v
 description: En evidensbaserad guide om hur du stöttar någon som mår dåligt. Artikeln förklarar hur du vågar fråga om svåra ämnen, lyssnar icke-dömande, använder MI-principer och erbjuder konkret, trygg och praktisk hjälp i stunden.
 date: 2025-11-04
 samling: handlingsguider
-postTags:
-  - suicidprevention
-  - krishantering
-  - mi
-  - anhörigstöd
-  - samtalsmetodik
-  - stödlinjer
 references:
   - Norrköpings kommun. (u.å.). *Handbok suicidprevention*. Hämtad från [https://norrkoping.se/download/18.5ff942e1184b3f255e24a777/1537449486744/Handbok%20suicidprevention.pdf].
   - Ross, V., Söderström, M., & Sjöberg, A. (2018, 2021). *Stöd till efterlevande efter suicid*.

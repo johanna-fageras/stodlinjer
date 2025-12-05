@@ -3,13 +3,6 @@ title: Hur gör jag när jag är ensam och dagarna flyter ihop?
 description: En praktisk och forskningsbaserad guide för när ensamheten gör dagarna formlösa. Den förklarar hur du lugnar kroppens stressystem, bygger upp struktur och återupprättar trygg social kontakt för att få tillbaka kontroll och stabilitet.
 date: 2025-11-01
 samling: handlingsguider
-postTags:
-  - ensamhet
-  - krishantering
-  - copingstrategier
-  - isolering
-  - vardagsångest
-  - rutiner
 references:
   - Akademiskt Primärvårdscentrum. (u.å.). *Manual Kognitiv beteendeterapi* (Dokument om ångestbehandling).
   - Folkhälsomyndigheten. (2025). *Psykisk hälsa och suicidprevention*.

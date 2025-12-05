@@ -3,14 +3,6 @@ title: Kan jag ringa om jag bara är ”lite” orolig?
 description: En artikel som förklarar varför du kan ringa en stödlinje även vid ”liten” oro. Den beskriver stödlinjers lågtröskeluppdrag, hur tidig kontakt förebygger lidande och varför ventilering och samtal är en viktig copingstrategi.
 date: 2025-11-12
 samling: faq
-postTags:
-  - faq
-  - stödlinjer
-  - oro
-  - psykiskohälsa
-  - självmordslinjen
-  - ventilering
-  - anhörigstöd
 references:
   - Mind. (u.å.). *Föräldralinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/].
   - Mind. (u.å.). *Självmordslinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/].

@@ -3,8 +3,6 @@ title: Krisreaktioner - Vad händer i din kropp och hur du kan återta kontrolle
 description:
 date: 2025-11-01
 samling: fordjupning
-postTags:
-  -
 references:
   - Akademiskt Primärvårdscentrum. (u.å.). *Manual Kognitiv beteendeterapi* (Dokument om ångestbehandling). Hämtad från [https://www.akademisktprimarvardscentrum.se/49c9be/globalassets/verksamheter/forskning-och-utveckling/akademiskt-primarvardscentrum/4.-fortbildning--kvalitetsstod/psykisk-halsa/manual-kognitiv-beteendeterapi.pdf]. 1
   - Hjärnfonden. (u.å.). *Att drabbas av en kris*. Hämtad från [https://www.hjarnfonden.se/om-hjarnan/diagnos/angest/att-drabbas-av-en-kris/].

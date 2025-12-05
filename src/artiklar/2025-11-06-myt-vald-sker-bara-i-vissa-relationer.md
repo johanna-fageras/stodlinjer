@@ -3,12 +3,6 @@ title: Myten ”Våld sker bara i vissa typer av relationer.” – Sanningen om
 description: En artikel som avlivar myten att våld bara förekommer i vissa relationer. Den visar att våld drabbar alla grupper, förklarar våldets breda uttryck och uppmuntrar utsatta att söka stöd utan skam eller tvekan.
 date: 2025-11-06
 samling: fakta-myter
-postTags:
-  - mytbrytare
-  - våldinärarelation
-  - kvinnofridslinjen
-  - våld
-  - anhörigstöd
 references:
   - Brå – Brottsförebyggande rådet. (2024). *Brott i nära relation* (Rapport 1/2024).
   - Jämställdhetsmyndigheten. (u.å.). *Stöd till dig som är våldsutsatt, anhörig eller våldsutövare*.

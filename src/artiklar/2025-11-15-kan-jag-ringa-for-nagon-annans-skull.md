@@ -3,13 +3,6 @@ title: Kan jag ringa för någon annans skull?
 description: En artikel som förklarar att du kan ringa en stödlinje även som anhörig. Den beskriver vilka linjer som erbjuder stöd, varför din oro är giltig och hur samtalet kan hjälpa både dig och den närstående.
 date: 2025-11-15
 samling: faq
-postTags:
-  - faq
-  - anhörigstöd
-  - socialtstöd
-  - oro
-  - närstående
-  - stödlinjer
 references:
   - Mind. (u.å.). *Föräldralinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/].
   - Mind. (u.å.). *Självmordslinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/].

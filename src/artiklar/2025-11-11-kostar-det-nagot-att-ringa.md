@@ -3,13 +3,6 @@ title: Kostar det något att ringa?
 description: En artikel som förklarar kostnader kring stödlinjesamtal. Den klargör att samtalen är gratis, beskriver den eventuella öppningsavgiften från operatörer och betonar att ekonomin aldrig ska vara ett hinder för att söka stöd.
 date: 2025-11-11
 samling: faq
-postTags:
-  - faq
-  - gratis
-  - stödlinjer
-  - självmordslinjen
-  - kvinnofridslinjen
-  - anonymitet
 references:
   - Mind. (u.å.). *Föräldralinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/].
   - Mind. (u.å.). *Självmordslinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/].

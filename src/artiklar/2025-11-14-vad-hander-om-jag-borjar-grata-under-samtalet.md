@@ -3,14 +3,6 @@ title: Vad händer om jag börjar gråta under samtalet?
 description: En artikel som förklarar att det är helt naturligt att gråta under ett stödlinjesamtal. Den beskriver hur utbildad personal bemöter starka känslor, varför gråt är en hälsosam copingstrategi och att du alltid har full kontroll.
 date: 2025-11-14
 samling: faq
-postTags:
-  - faq
-  - känslor
-  - stödlinjer
-  - ventilering
-  - copingstrategier
-  - tystnad
-  - trygghet
 references:
   - Mind. (u.å.). *Självmordslinjen*.
   - Mind. (u.å.). *Äldrelinjen*.

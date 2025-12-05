@@ -3,13 +3,6 @@ title: Myten ”Det är meningslöst att hjälpa någon som inte ‘vill bli hj�
 description: En artikel som avlivar myten att det är meningslöst att hjälpa någon som ”inte vill bli hjälpt”. Den förklarar ambivalens, MI-principer och varför uthålligt, icke-dömande stöd kan stärka den inre motivation som leder till förändring.
 date: 2025-11-08
 samling: fakta-myter
-postTags:
-  - mytbrytare
-  - motiverandesamtal
-  - mi
-  - anhörigstöd
-  - egenmakt
-  - copingstrategier
 references:
   - Folkhälsomyndigheten. (2025). *Psykisk hälsa och suicidprevention*.
   - Socialstyrelsen. (2018). *MI (Motiverande samtal)*.

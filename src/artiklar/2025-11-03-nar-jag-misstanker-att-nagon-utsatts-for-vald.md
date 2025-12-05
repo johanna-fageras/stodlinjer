@@ -3,12 +3,6 @@ title: Hur gör jag när jag misstänker att någon är utsatt för våld?
 description: En evidensbaserad guide om hur du bemöter någon du misstänker utsätts för våld. Artikeln förklarar våldets olika uttryck, hur du öppnar ett tryggt samtal, stärker personens autonomi och erbjuder praktiskt, långsiktigt och säkert stöd.
 date: 2025-11-03
 samling: handlingsguider
-postTags:
-  - anhörigstöd
-  - krishantering
-  - våld
-  - kvinnofridslinjen
-  - våldinärarelation
 references:
   - Jämställdhetsmyndigheten. (u.å.). *Stöd till dig som är våldsutsatt, anhörig eller våldsutövare*. Hämtad från [https://jamstalldhetsmyndigheten.se/mans-vald-mot-kvinnor/stod-till-dig-som-ar-valdsutsatt-anhorig-eller-valdsutovare/].
   - Kinnunen, E., & Linder, L. (u.å.). *Sjuksköterskors copingstrategier vid arbetsrelaterad stress* (Litteraturstudie). Vårdförbundet.

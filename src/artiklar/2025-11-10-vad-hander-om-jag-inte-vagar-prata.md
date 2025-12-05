@@ -3,13 +3,6 @@ title: Vad händer om jag inte vågar prata? (tystnadsrätten i samtal)
 description: En artikel som förklarar att tystnad i stödlinjesamtal är helt okej. Den beskriver tystnadsrätten, hur volontärer arbetar lugnt och icke-dömande, och varför även ordlös kontakt kan bryta isolering och skapa trygghet.
 date: 2025-11-10
 samling: faq
-postTags:
-  - faq
-  - samtalspsykologi
-  - anonymitet
-  - tystnadsrätt
-  - trygghet
-  - reflektion
 references:
   - Mind. (u.å.). *Äldrelinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/aldrelinjen/].
   - Mind. (u.å.). *Självmordslinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/].

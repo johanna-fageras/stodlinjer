@@ -3,13 +3,6 @@ title: Ser stödlinjen mitt nummer?
 description: En artikel som förklarar hur stödlinjer skyddar din anonymitet. Den beskriver varför ditt nummer inte visas, hur samtalen hanteras tryggt och hur anonymitet gör det lättare att prata öppet om hur du mår.
 date: 2025-11-18
 samling: faq
-postTags:
-  - anonymitet
-  - stödlinjer
-  - integritet
-  - faq
-  - självmordslinjen
-  - kvinnofridslinjen
 references:
   - Jämställdhetsmyndigheten. (u.å.). *Stöd till dig som är våldsutsatt, anhörig eller våldsutövare*. Hämtad från [https://jamstalldhetsmyndigheten.se/mans-vald-mot-kvinnor/stod-till-dig-som-ar-valdsutsatt-anhorig-eller-valdsutovare/].
   - Mind. (u.å.). *Föräldralinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/].

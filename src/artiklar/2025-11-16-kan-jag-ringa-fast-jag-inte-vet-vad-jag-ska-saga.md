@@ -3,13 +3,6 @@ title: Kan jag ringa fast jag inte vet vad jag ska säga?
 description: En artikel som förklarar att du kan ringa en stödlinje även när orden saknas. Den beskriver volontärernas lyssnande roll, anonymitetens trygghet och hur samtalet kan hjälpa dig sortera känslor och minska ångest.
 date: 2025-11-16
 samling: faq
-postTags:
-  - faq
-  - stödlinjer
-  - samtalspsykologi
-  - ventilering
-  - ångest
-  - copingstrategier
 references:
   - Mind. (u.å.). *Föräldralinjen*.
   - Mind. (u.å.). *Självmordslinjen*.

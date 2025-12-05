@@ -3,13 +3,6 @@ title: Myten ”Att söka hjälp är ett tecken på svaghet.” – Sanningen om
 description: En artikel som avlivar myten att hjälpsökande är ett tecken på svaghet. Den visar hur resiliens, evidensbaserad behandling och social kontakt utgör verklig styrka, och varför att söka stöd är ett aktivt, rationellt steg mot återhämtning.
 date: 2025-11-07
 samling: fakta-myter
-postTags:
-  - mytbrytare
-  - psykiskohälsa
-  - resiliens
-  - evidensbaserat
-  - kbt
-  - egenmakt
 references:
   - EBSCO. (u.å.). *Posttraumatic growth*.
   - Hjärnfonden. (2023). *Därför mår vi bra av sociala kontakter*.

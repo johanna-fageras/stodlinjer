@@ -3,13 +3,6 @@ title: Myten ”Barn förstår inte sånt här.” – Sanningen om Barns Känsl
 description: En evidensbaserad text som avlivar myten att barn inte förstår svåra händelser. Artikeln förklarar barns känslighet, varför tystnad skadar, och hur vuxna tryggt kan prata, stödja och hjälpa barn vidare till professionell hjälp.
 date: 2025-11-05
 samling: fakta-myter
-postTags:
-  - mytbrytare
-  - evidensbaserat
-  - barnsomanhörig
-  - våld
-  - barn
-  - trappmodellen
 references:
   - Folkhälsomyndigheten. (2025). *Psykisk hälsa och suicidprevention*.
   - Karolinska Institutet. (u.å.). *MHFA - Första hjälpen till psykisk hälsa*.

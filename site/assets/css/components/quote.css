@@ -1,6 +1,6 @@
 .quote-block {
   position: relative;
-  background: var(--card);
+  background: var(--card) !important;
   border-radius: 8px;
   padding: 28px 32px;
   margin: 0;
@@ -78,7 +78,7 @@
 }
 
 :root[data-theme='dark'] .quote-block {
-  background: var(--card-strong);
+  background: var(--card);
 }
 
 :root[data-theme='dark'] .quote-icon,

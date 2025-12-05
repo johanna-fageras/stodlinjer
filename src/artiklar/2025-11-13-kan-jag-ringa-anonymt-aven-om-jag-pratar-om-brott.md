@@ -3,14 +3,6 @@ title: Kan jag ringa anonymt även om jag pratar om brott?
 description: En artikel som förklarar att du kan ringa stödlinjer anonymt även när du pratar om brott. Den beskriver nummer­skydd, tystnadsplikt och hur anonymiteten gör det tryggt att söka stöd i känsliga situationer.
 date: 2025-11-13
 samling: faq
-postTags:
-  - faq
-  - anonymitet
-  - brottsoffer
-  - våld
-  - brottsofferjouren
-  - integritet
-  - tystnadsplikt
 references:
   - Mind. (u.å.). *Föräldralinjen*.
   - Informationsverige. (u.å.). *Stödlinjer du kan ringa till utan att berätta vem du är*.

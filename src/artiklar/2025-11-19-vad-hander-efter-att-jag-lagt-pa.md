@@ -3,13 +3,6 @@ title: Vad händer efter att jag lagt på?
 description: En artikel som förklarar vad som händer efter ett stödlinjesamtal. Den beskriver din fulla kontroll, varför ingen kan ringa tillbaka, hur anonymiteten skyddas och att du alltid kan höra av dig igen när du behöver stöd.
 date: 2025-11-19
 samling: faq
-postTags:
-  - faq
-  - stödlinjer
-  - anonymitet
-  - integritet
-  - tystnadsplikt
-  - kontroll
 references:
   - Mind. (u.å.). *Föräldralinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/].
   - Mind. (u.å.). *Självmordslinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/].

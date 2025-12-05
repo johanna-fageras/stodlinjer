@@ -70,6 +70,17 @@ body {
   letter-spacing: 0.005em;
 }
 
+/* Solid background variant for home/contact */
+body.solid-bg-shell {
+  background: #f8ece0;
+  background-image: none;
+}
+
+:root[data-theme='dark'] body.solid-bg-shell {
+  background: #121218;
+  background-image: none;
+}
+
 /* ==========================================================================
    Typography Scale & Rhythm for Athletics
    ========================================================================== */

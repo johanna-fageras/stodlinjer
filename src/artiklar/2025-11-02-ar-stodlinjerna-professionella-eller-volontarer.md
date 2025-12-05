@@ -3,13 +3,6 @@ title: Är stödlinjerna professionella eller volontärer?
 description: En artikel som förklarar vilka som bemannar stödlinjer. Den beskriver skillnaden mellan professionella och volontärer, hur kompetensen varierar mellan linjer och varför du alltid får ett tryggt, anonymt och respektfullt samtal oavsett vem som svarar.
 date: 2025-11-02
 samling: faq
-postTags:
-  - faq
-  - stödlinjer
-  - volontärer
-  - psykologer
-  - socionomer
-  - profession
 references:
   - Mind. (u.å.). *Föräldralinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/foraldralinjen/].
   - Mind. (u.å.). *Självmordslinjen*. Hämtad från [https://mind.se/stod-kunskap/prata-eller-chatta-med-volontar/sjalvmordslinjen/].

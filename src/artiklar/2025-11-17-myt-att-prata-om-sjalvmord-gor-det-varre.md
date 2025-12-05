@@ -3,12 +3,6 @@ title: Myten ”Att prata om självmord gör det värre” – Sanningen som Rä
 description: En evidensbaserad text som avlivar myten att samtal om självmord är farliga. Artikeln förklarar varför raka frågor räddar liv, hur suicidprocessen faktiskt ser ut och hur du kan öppna ett tryggt, stödjande samtal.
 date: 2025-11-17
 samling: fakta-myter
-postTags:
-  - mytbrytare
-  - suicidprevention
-  - stödlinjer
-  - fakta
-  - självmordstankar
 references:
   - Norrköpings kommun. (u.å.). *Handbok suicidprevention*.
   - Region Västmanland. (u.å.). *Stöd och hjälp till att prata om psykisk ohälsa*.

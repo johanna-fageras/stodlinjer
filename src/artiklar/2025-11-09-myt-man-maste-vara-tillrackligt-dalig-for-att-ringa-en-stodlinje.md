@@ -3,13 +3,6 @@ title: Myten ”Man måste vara ‘tillräckligt dålig’ för att ringa en st�
 description: En artikel som avlivar myten att man måste må ”tillräckligt dåligt” för att ringa en stödlinje. Den förklarar stödlinjers lågtröskeluppdrag, varför tidig kontakt förebygger lidande och hur anonymt stöd minskar isolering och stärker välmåendet.
 date: 2025-11-09
 samling: fakta-myter
-postTags:
-  - mytbrytare
-  - stödlinjer
-  - suicidprevention
-  - anhörigstöd
-  - självmordslinjen
-  - copingstrategier
 references:
   - Folkhälsomyndigheten. (2025). *Psykisk hälsa och suicidprevention*.
   - Hjärnfonden. (2023). *Därför mår vi bra av sociala kontakter*.
