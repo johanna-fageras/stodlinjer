@@ -337,42 +337,121 @@ function initFilters() {
 function initArticleFilters() {
   const grid = document.querySelector('[data-article-grid]');
   const filterButtons = Array.from(document.querySelectorAll('[data-samling-filter]'));
+  const paginationEl = document.querySelector('[data-pagination]');
 
   if (!grid || !filterButtons.length) return;
 
   const cards = Array.from(grid.querySelectorAll('[data-samling-item]'));
   const counter = document.getElementById('articleCount');
+  const state = {
+    filter: 'all',
+    page: 1,
+    pageSize: parseInt(grid.dataset.pageSize, 10) || 9
+  };
 
-  const applyFilter = (value) => {
-    let visibleCount = 0;
-
+  const setFilterButtonState = (value) => {
     filterButtons.forEach((btn) => {
       const isActive = btn.dataset.samlingFilter === value;
       btn.classList.toggle('is-active', isActive);
       btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     });
+  };
 
-    cards.forEach((card) => {
-      const matches = value === 'all' || card.dataset.samlingItem === value;
-      card.classList.toggle('hidden', !matches);
-      if (matches) visibleCount += 1;
-    });
+  const getFilteredCards = () =>
+    cards.filter(
+      (card) => state.filter === 'all' || card.dataset.samlingItem === state.filter
+    );
+
+  const renderPaginationControls = (totalPages) => {
+    if (!paginationEl) return;
+
+    if (totalPages <= 1) {
+      paginationEl.innerHTML = '';
+      return;
+    }
+
+    const makeLink = (page, label, disabled, rel) => {
+      if (disabled) {
+        return `<span class="pagination-link is-disabled">${label}</span>`;
+      }
+      return `<a class="pagination-link" href="#" data-page="${page}"${rel ? ` rel="${rel}"` : ''}>${label}</a>`;
+    };
+
+    const prev = makeLink(
+      state.page - 1,
+      '<i class="fas fas-arrow-left" aria-hidden="true"></i> Föregående',
+      state.page === 1,
+      'prev'
+    );
+    const next = makeLink(
+      state.page + 1,
+      `Nästa <i class="fas fas-arrow-right" aria-hidden="true"></i>`,
+      state.page === totalPages,
+      'next'
+    );
+    const info = `<span class="pagination-info">Sida ${state.page} av ${totalPages}</span>`;
+
+    paginationEl.innerHTML = `
+      <div class="pagination-prev">${prev}</div>
+      <div class="pagination-center">${info}</div>
+      <div class="pagination-next">${next}</div>
+    `;
+  };
+
+  const render = () => {
+    const filteredCards = getFilteredCards();
+    const totalPages = Math.max(1, Math.ceil(filteredCards.length / state.pageSize));
+
+    if (state.page > totalPages) {
+      state.page = totalPages;
+    }
+
+    cards.forEach((card) => card.classList.add('hidden'));
+
+    const start = (state.page - 1) * state.pageSize;
+    const visible = filteredCards.slice(start, start + state.pageSize);
+    visible.forEach((card) => card.classList.remove('hidden'));
 
     if (counter) {
-      const total = cards.length;
-      counter.textContent = `Visar ${visibleCount} av ${total} artiklar`;
+      const startDisplay = filteredCards.length ? start + 1 : 0;
+      const endDisplay = filteredCards.length
+        ? Math.min(filteredCards.length, start + visible.length)
+        : 0;
+      counter.textContent = filteredCards.length
+        ? `Visar ${startDisplay}-${endDisplay} av ${filteredCards.length} artiklar`
+        : 'Inga artiklar matchar filtret';
     }
+
+    renderPaginationControls(totalPages);
   };
 
   const initial = filterButtons.find((btn) => btn.classList.contains('is-active'));
-  applyFilter(initial ? initial.dataset.samlingFilter || 'all' : 'all');
+  state.filter = initial ? initial.dataset.samlingFilter || 'all' : 'all';
+  setFilterButtonState(state.filter);
+  render();
 
   filterButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      applyFilter(btn.dataset.samlingFilter || 'all');
+      const value = btn.dataset.samlingFilter || 'all';
+      state.filter = value;
+      state.page = 1;
+      setFilterButtonState(value);
+      render();
     });
   });
+
+  if (paginationEl) {
+    paginationEl.addEventListener('click', (e) => {
+      const link = e.target.closest('[data-page]');
+      if (!link) return;
+      e.preventDefault();
+      const page = parseInt(link.dataset.page, 10);
+      if (Number.isNaN(page) || page === state.page) return;
+      state.page = page;
+      render();
+    });
+  }
 }
 
 // ==========================================================================
@@ -445,4 +524,8 @@ function init() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', init);
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}

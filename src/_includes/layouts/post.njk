@@ -11,24 +11,14 @@
     <article class="surface-card strong-card post-shell">
       <div class="post-header">
         {% if samling %}
-          <a
-            class="samling-chip samling-chip-large"
-            href="{{ baseUrl }}/samlingar/{{ samling }}/"
-            aria-label="Visa samlingen {{ samlingInfo.title }}"
-          >
-            <i class="{{ samlingInfo.icon or 'fas fas-folder' }}"></i>
-            <span>{{ samlingInfo.title }}</span>
-          </a>
+          <i class="post-samling-icon far far-book-open-cover" aria-hidden="true"></i>
         {% endif %}
 
         <h1 class="post-title">{{ title }}</h1>
         <p class="post-meta">
           <span><i class="far far-calendar"></i> {{ date | formatDate }}</span>
           {% if samling %}
-            <span>• Samling: <a href="{{ baseUrl }}/samlingar/{{ samling }}/">{{ samlingInfo.title }}</a></span>
-          {% endif %}
-          {% if postTags %}
-            <span>• {{ postTags | length }} taggar</span>
+            <span>• <a href="{{ baseUrl }}/samlingar/{{ samling }}/">{{ samlingInfo.title }}</a></span>
           {% endif %}
         </p>
 
@@ -41,19 +31,9 @@
         {{ content | safe }}
       </div>
 
-      {% if postTags %}
-        <div class="post-tags">
-          <div class="post-tag-list">
-            {% for tag in postTags %}
-              <span class="article-tag">#{{ tag }}</span>
-            {% endfor %}
-          </div>
-        </div>
-      {% endif %}
-
       {% if references %}
         <div class="post-references">
-          <p class="muted text-xs uppercase tracking-wide flex items-center gap-2">
+          <p class="text-xs uppercase tracking-wide flex items-center gap-2">
             <i class="fas fas-book" aria-hidden="true"></i> Referenser
           </p>
           <ol class="reference-list">

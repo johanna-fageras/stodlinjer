@@ -134,7 +134,7 @@ body {
 /* Body text */
 .page-shell p,
 .page-shell li {
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.45;
   letter-spacing: 0.005em;
 }
@@ -158,9 +158,10 @@ body {
 }
 
 .page-shell .text-xs {
-  font-size: 0.75rem !important;
+  font-size: 1rem !important;
   line-height: 1.45 !important;
   letter-spacing: 0.015em !important;
+  font-weight: 800;
 }
 
 /* Strong/bold text */

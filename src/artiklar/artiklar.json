@@ -2,6 +2,7 @@
   "layout": "layouts/post.njk",
   "tags": ["artikel"],
   "permalink": "/artiklar/{{ page.fileSlug }}/",
+  "pageClass": "article-shell",
   "header": {
     "icon": "fas fas-book-open",
     "label": "Kunskap & artiklar",

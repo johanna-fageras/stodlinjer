@@ -4,6 +4,7 @@ description: >-
   Fördjupade artiklar om stödlinjer, bemötande och tryggt agerande i kris. Filtrera på samlingar och hitta guider som passar din situation.
 permalink: "/artiklar/"
 pageClass: "archive-shell"
+articlesPerPage: 9
 header:
   icon: "fas fas-newspaper"
   label: "Artiklar & guider"
@@ -29,6 +30,10 @@ header:
 
 {% block content %}
   {% set totalArticles = collections.articles | length %}
+  {% set initialEnd = totalArticles %}
+  {% if totalArticles > articlesPerPage %}
+    {% set initialEnd = articlesPerPage %}
+  {% endif %}
 
   <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
     <div class="surface-card strong-card p-6 sm:p-8 article-hero">
@@ -45,7 +50,6 @@ header:
         <div class="hero-chips">
           <span class="stat-chip"><i class="fas fas-newspaper"></i> {{ totalArticles }} artiklar</span>
           <span class="stat-chip"><i class="fas fas-list-check"></i> {{ samlingar | length }} samlingar</span>
-          <span class="stat-chip"><i class="fas fas-hashtag"></i> Taggar vid varje artikel</span>
         </div>
       </div>
     </div>
@@ -59,7 +63,7 @@ header:
           <p class="muted text-sm mb-0">Samlingar samlar artiklar på samma tema.</p>
         </div>
         <span class="muted text-sm" id="articleCount">
-          Visar {{ totalArticles }} av {{ totalArticles }} artiklar
+          Visar 1-{{ initialEnd }} av {{ totalArticles }} artiklar
         </span>
       </div>
       <div class="filter-row" role="group" aria-label="Filtrera artiklar på samling">
@@ -90,11 +94,12 @@ header:
         {% endfor %}
       </div>
 
-      <div class="article-grid" data-article-grid>
+      <div class="article-grid" data-article-grid data-page-size="{{ articlesPerPage }}">
         {% for post in collections.articles %}
           {{ articleCard(post) }}
         {% endfor %}
       </div>
+      <nav class="pagination" data-pagination aria-label="Artikelsidor"></nav>
     </div>
   </section>
 {% endblock %}

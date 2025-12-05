@@ -24,11 +24,10 @@
     {% endif %}
 
     <div class="article-card-footer">
-      <div class="article-tag-row">
-        {% for tag in post.data.postTags or [] %}
-          <span class="article-tag">#{{ tag }}</span>
-        {% endfor %}
-      </div>
+      <a class="read-more" href="{{ baseUrl }}{{ post.url }}">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
     </div>
   </article>
 {% endmacro %}

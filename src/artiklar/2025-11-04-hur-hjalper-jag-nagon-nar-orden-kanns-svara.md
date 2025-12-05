@@ -1,7 +1,7 @@
 ---
 title: Hur gör jag när jag vill hjälpa någon som mår dåligt men inte vet vad jag ska säga?
 description: En evidensbaserad guide om hur du stöttar någon som mår dåligt. Artikeln förklarar hur du vågar fråga om svåra ämnen, lyssnar icke-dömande, använder MI-principer och erbjuder konkret, trygg och praktisk hjälp i stunden.
-date: 2025-11-02
+date: 2025-11-04
 samling: handlingsguider
 postTags:
   - suicidprevention
