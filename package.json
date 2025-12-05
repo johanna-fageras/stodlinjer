@@ -4,7 +4,7 @@
   "description": "En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på ett ställe — för dig som behöver hjälp, eller för dig som vill hjälpa någon annan.",
   "main": "index.js",
   "scripts": {
-    "build": "ELEVENTY_PATH_PREFIX=/ npx @11ty/eleventy",
+    "build": "eleventy",
     "build:gh-pages": "ELEVENTY_PATH_PREFIX=/stodlinjer npx @11ty/eleventy",
     "serve": "ELEVENTY_PATH_PREFIX=/ npx @11ty/eleventy --serve",
     "start": "npm run serve"
