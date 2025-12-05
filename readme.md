@@ -17,7 +17,7 @@ Byggt med **Eleventy (11ty)** och Nunjucks-mallar, med data i JSON-filer under `
 ## ✨ Funktioner
 
 - 🔍 **Sökbar lista** med 21+ svenska stödlinjer
- - 🏷️ **Kategorifiltrering** — psykisk hälsa, barn & unga, våld, missbruk, äldre
+- 🏷️ **Kategorifiltrering** — psykisk hälsa, barn & unga, våld, missbruk, äldre
 - #️⃣ **Taggfiltrering** för detaljerad sökning
 - 🌓 **Ljust/mörkt tema** med automatisk systempreferens
 - 🔗 **URL-baserad sökning** (`?q=sökterm`) för delning och schema.org SearchAction
@@ -41,7 +41,7 @@ Lokalt utvecklingsläge med live-reload:
 npm run serve
 ```
 
-Bygg statisk sajt (till `docs/`, konfigurerat för GitHub Pages):
+Bygg statisk sajt (till `site/`, konfigurerat för GitHub Pages):
 
 ```bash
 npm run build
@@ -67,7 +67,7 @@ src/
     └── fonts/              # Ikon- och typsnitts-filer
 ```
 
-Output: `docs/` (Eleventy skriver färdiga HTML-filer och kopierar assets).
+Output: `site/` (Eleventy skriver färdiga HTML-filer och kopierar assets).
 
 ---
 
@@ -129,7 +129,7 @@ Webbplatsen använder ett varmt, lugnt färgschema med fokus på tillgänglighet
 
 ## 🚀 Publicering
 
-Konfigurerad för **GitHub Pages** genom att bygga till `docs/`. Kör `npm run build` och pusha — Pages serverar innehållet direkt från `docs/`.
+Konfigurerad för **GitHub Pages** genom att bygga till `site/`. Kör `npm run build` och pusha — Pages serverar innehållet direkt från `site/`.
 
 ---
 

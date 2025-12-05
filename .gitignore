@@ -16,5 +16,5 @@ pnpm-debug.log*
 .env.*.local
 
 # Build output / cache
-docs/
+site/
 .cache/
