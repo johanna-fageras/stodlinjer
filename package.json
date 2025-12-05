@@ -2,13 +2,14 @@
   "name": "stodlinjer",
   "version": "3.0.0",
   "description": "En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på ett ställe — för dig som behöver hjälp, eller för dig som vill hjälpa någon annan.",
-  "main": "index.js",
   "scripts": {
     "build": "eleventy",
-    "build:gh-pages": "ELEVENTY_PATH_PREFIX=/stodlinjer npx @11ty/eleventy",
-    "serve": "ELEVENTY_PATH_PREFIX=/ npx @11ty/eleventy --serve",
+    "serve": "eleventy --serve --port=8080",
+    "watch": "eleventy --watch",
+    "clean": "rm -rf site",
     "start": "npm run serve"
   },
+  "main": "index.js",
   "keywords": [
     "support-lines",
     "mental-health",
