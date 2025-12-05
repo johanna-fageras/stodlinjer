@@ -1,0 +1,28 @@
+{% set pageTitle = title or site.name %}
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="{{ site.author }}" />
+<title>{{ pageTitle }}</title>
+{% if description %}
+  <meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+  <meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ baseUrl }}{{ page.url }}" />
+<meta name="color-scheme" content="{{ site.colorScheme }}" />
+<meta name="theme-color" content="{{ site.themeColor }}" />
+<!-- Prevent theme flash: set theme class before paint -->
+<script>
+  (function () {
+    var t =
+      localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+    if (t === 'dark') document.documentElement.classList.add('dark');
+  })();
+</script>
+<script>window.BASE_URL = '{{ baseUrl }}';</script>
+<script src="{{ baseUrl }}/assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ baseUrl }}/assets/css/main.css" />
