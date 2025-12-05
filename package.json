@@ -1,6 +1,6 @@
 {
   "name": "stodlinjer",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "En ideell informationssida som samlar svenska stödlinjer och hjälplinjer på ett ställe — för dig som behöver hjälp, eller för dig som vill hjälpa någon annan.",
   "main": "index.js",
   "scripts": {

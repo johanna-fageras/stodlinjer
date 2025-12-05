@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "docs"
+  publish = "site"
 
 [build.environment]
   ELEVENTY_PATH_PREFIX = "/"

@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="sv-SE" data-theme="light">
+  <head>
+    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="author" content="Robert Claesson" />
+<title>Artiklar &amp; guider | Stödlinjer Sverige</title>
+
+  <meta name="description" content="Fördjupade artiklar om stödlinjer, bemötande och tryggt agerande i kris. Filtrera på samlingar och hitta guider som passar din situation." />
+
+
+<link rel="canonical" href="https://stodlinjer.se/artiklar/" />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#0f1724" />
+<!-- Prevent theme flash: set theme class before paint -->
+<script>
+  (function () {
+    var t =
+      localStorage.getItem('theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.dataset.theme = t;
+    if (t === 'dark') document.documentElement.classList.add('dark');
+  })();
+</script>
+<script>window.BASE_URL = '';</script>
+<script src="/assets/js/tailwind-config.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/assets/css/main.css" />
+
+  </head>
+
+  <body class="min-h-screen flex flex-col page-shell archive-shell">
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue-600 focus:text-white focus:px-3 focus:py-2 focus:rounded-md"
+      >Hoppa till innehåll</a
+    >
+
+    
+  
+<header class="header-shell">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a class="brand-mark" aria-label="Till startsidan" href="/">
+        <i class="fas fas-newspaper" aria-hidden="true"></i>
+      </a>
+      <div class="header-text">
+        <p
+          class="text-xs font-semibold uppercase tracking-wide"
+          style="margin: 0; color: var(--accent)"
+        >
+          Artiklar &amp; guider
+        </p>
+        <h1>Fördjupa dig</h1>
+        <p>Samlade råd, steg-för-steg-guider och förklaringar kring stödlinjer.</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      
+        
+          <a href="/" class="header-link" aria-label="Till startsidan">
+            <i class="fas fas-house"></i><span>Startsida</span>
+          </a>
+        
+          <a href="/kontakt/" class="header-link" aria-label="Kontakta oss">
+            <i class="fas fas-envelope-open-text"></i><span>Kontakt</span>
+          </a>
+        
+      
+      <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="true">
+        <span id="themeIcon" aria-hidden="true"><i class="fas fas-moon"></i></span>
+        <span id="themeLabel">Mörkt läge</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+
+    <main id="main" class="flex-1">
+  
+  
+  
+    
+  
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+    <div class="surface-card strong-card p-6 sm:p-8 article-hero">
+      <div class="article-hero-text">
+        <p class="pill w-fit"><i class="fas fas-lightbulb"></i> Kunskap som går att använda</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-3">
+          Artiklar och guider om tryggt stöd
+        </h2>
+        <p class="muted text-lg max-w-3xl">
+          Här samlar vi artiklar om hur du pratar med någon som mår dåligt, hur du agerar vid akut
+          kris och hur du hittar rätt stödlinje till rätt person. Filtrera på samlingar för att se
+          ämnen som passar din situation.
+        </p>
+        <div class="hero-chips">
+          <span class="stat-chip"><i class="fas fas-newspaper"></i> 32 artiklar</span>
+          <span class="stat-chip"><i class="fas fas-list-check"></i> 8 samlingar</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="surface-card p-5 sm:p-6 mt-6">
+      <div class="filter-header">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-[var(--muted)] font-semibold mb-1">
+            Filtrera efter samling
+          </p>
+          <p class="muted text-sm mb-0">Samlingar samlar artiklar på samma tema.</p>
+        </div>
+        <span class="muted text-sm" id="articleCount">
+          Visar 1-9 av 32 artiklar
+        </span>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filtrera artiklar på samling">
+        <button
+          class="category-btn is-active"
+          data-samling-filter="all"
+          aria-pressed="true"
+          type="button"
+        >
+          <span><i class="fas fas-asterisk"></i> Alla samlingar</span>
+        </button>
+        
+          
+          
+            
+          
+            
+          
+            
+          
+            
+              
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="handlingsguider"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-bolt"></i> Handlingsguider</span>
+            <span class="filter-count">3</span>
+          </button>
+        
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="samtalsstod"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-comments-question"></i> Samtalsstöd</span>
+            <span class="filter-count">0</span>
+          </button>
+        
+          
+          
+            
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="fakta-myter"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-circle-question"></i> Fakta &amp; myter</span>
+            <span class="filter-count">6</span>
+          </button>
+        
+          
+          
+            
+          
+            
+              
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="faq"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-message-question"></i> Frågor &amp; svar</span>
+            <span class="filter-count">10</span>
+          </button>
+        
+          
+          
+            
+          
+            
+          
+            
+              
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="fordjupning"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-books"></i> Fördjupning</span>
+            <span class="filter-count">9</span>
+          </button>
+        
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="praktiska-verktyg"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-toolbox"></i> Praktiska verktyg</span>
+            <span class="filter-count">0</span>
+          </button>
+        
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="expertforklarat"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-brain"></i> Expertförklarat</span>
+            <span class="filter-count">0</span>
+          </button>
+        
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          <button
+            class="category-btn"
+            data-samling-filter="ord-som-bar"
+            aria-pressed="false"
+            type="button"
+          >
+            <span><i class="fas fas-hands-holding-heart"></i> Ord som bär</span>
+            <span class="filter-count">0</span>
+          </button>
+        
+      </div>
+
+      <div class="article-grid" data-article-grid data-page-size="9">
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">19 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/vad-hander-efter-att-jag-lagt-pa/">Vad händer efter att jag lagt på?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar vad som händer efter ett stödlinjesamtal. Den beskriver din fulla kontroll, varför ingen kan ringa tillbaka, hur anonymiteten skyddas och att du alltid kan höra av dig igen när du behöver stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/vad-hander-efter-att-jag-lagt-pa/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">18 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/ser-stodlinjen-mitt-nummer/">Ser stödlinjen mitt nummer?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar hur stödlinjer skyddar din anonymitet. Den beskriver varför ditt nummer inte visas, hur samtalen hanteras tryggt och hur anonymitet gör det lättare att prata öppet om hur du mår.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/ser-stodlinjen-mitt-nummer/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">17 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/myt-att-prata-om-sjalvmord-gor-det-varre/">Myten ”Att prata om självmord gör det värre” – Sanningen som Räddar Liv</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad text som avlivar myten att samtal om självmord är farliga. Artikeln förklarar varför raka frågor räddar liv, hur suicidprocessen faktiskt ser ut och hur du kan öppna ett tryggt, stödjande samtal.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/myt-att-prata-om-sjalvmord-gor-det-varre/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">16 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/kan-jag-ringa-fast-jag-inte-vet-vad-jag-ska-saga/">Kan jag ringa fast jag inte vet vad jag ska säga?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att du kan ringa en stödlinje även när orden saknas. Den beskriver volontärernas lyssnande roll, anonymitetens trygghet och hur samtalet kan hjälpa dig sortera känslor och minska ångest.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/kan-jag-ringa-fast-jag-inte-vet-vad-jag-ska-saga/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">15 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/kan-jag-ringa-for-nagon-annans-skull/">Kan jag ringa för någon annans skull?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att du kan ringa en stödlinje även som anhörig. Den beskriver vilka linjer som erbjuder stöd, varför din oro är giltig och hur samtalet kan hjälpa både dig och den närstående.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/kan-jag-ringa-for-nagon-annans-skull/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">14 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/vad-hander-om-jag-borjar-grata-under-samtalet/">Vad händer om jag börjar gråta under samtalet?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att det är helt naturligt att gråta under ett stödlinjesamtal. Den beskriver hur utbildad personal bemöter starka känslor, varför gråt är en hälsosam copingstrategi och att du alltid har full kontroll.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/vad-hander-om-jag-borjar-grata-under-samtalet/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">13 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/kan-jag-ringa-anonymt-aven-om-jag-pratar-om-brott/">Kan jag ringa anonymt även om jag pratar om brott?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att du kan ringa stödlinjer anonymt även när du pratar om brott. Den beskriver nummer­skydd, tystnadsplikt och hur anonymiteten gör det tryggt att söka stöd i känsliga situationer.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/kan-jag-ringa-anonymt-aven-om-jag-pratar-om-brott/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">12 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/kan-jag-ringa-om-jag-bara-ar-lite-orolig/">Kan jag ringa om jag bara är ”lite” orolig?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar varför du kan ringa en stödlinje även vid ”liten” oro. Den beskriver stödlinjers lågtröskeluppdrag, hur tidig kontakt förebygger lidande och varför ventilering och samtal är en viktig copingstrategi.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/kan-jag-ringa-om-jag-bara-ar-lite-orolig/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">11 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/kostar-det-nagot-att-ringa/">Kostar det något att ringa?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar kostnader kring stödlinjesamtal. Den klargör att samtalen är gratis, beskriver den eventuella öppningsavgiften från operatörer och betonar att ekonomin aldrig ska vara ett hinder för att söka stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/kostar-det-nagot-att-ringa/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">10 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/vad-hander-om-jag-inte-vagar-prata/">Vad händer om jag inte vågar prata? (tystnadsrätten i samtal)</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar att tystnad i stödlinjesamtal är helt okej. Den beskriver tystnadsrätten, hur volontärer arbetar lugnt och icke-dömande, och varför även ordlös kontakt kan bryta isolering och skapa trygghet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/vad-hander-om-jag-inte-vagar-prata/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">9 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/myt-man-maste-vara-tillrackligt-dalig-for-att-ringa-en-stodlinje/">Myten ”Man måste vara ‘tillräckligt dålig’ för att ringa en stödlinje.”</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att man måste må ”tillräckligt dåligt” för att ringa en stödlinje. Den förklarar stödlinjers lågtröskeluppdrag, varför tidig kontakt förebygger lidande och hur anonymt stöd minskar isolering och stärker välmåendet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/myt-man-maste-vara-tillrackligt-dalig-for-att-ringa-en-stodlinje/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">8 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/myt-det-ar-meningslost-att-hjalpa-nagon-som-inte-vill-ha-hjalp/">Myten ”Det är meningslöst att hjälpa någon som inte ‘vill bli hjälpt’.”</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att det är meningslöst att hjälpa någon som ”inte vill bli hjälpt”. Den förklarar ambivalens, MI-principer och varför uthålligt, icke-dömande stöd kan stärka den inre motivation som leder till förändring.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/myt-det-ar-meningslost-att-hjalpa-nagon-som-inte-vill-ha-hjalp/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">7 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/myt-att-soka-hjalp-ar-ett-tecken-pa-svaghet/">Myten ”Att söka hjälp är ett tecken på svaghet.” – Sanningen om Aktiv Styrka</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att hjälpsökande är ett tecken på svaghet. Den visar hur resiliens, evidensbaserad behandling och social kontakt utgör verklig styrka, och varför att söka stöd är ett aktivt, rationellt steg mot återhämtning.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/myt-att-soka-hjalp-ar-ett-tecken-pa-svaghet/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">6 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/myt-vald-sker-bara-i-vissa-relationer/">Myten ”Våld sker bara i vissa typer av relationer.” – Sanningen om Våldets Verkliga Omfång</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som avlivar myten att våld bara förekommer i vissa relationer. Den visar att våld drabbar alla grupper, förklarar våldets breda uttryck och uppmuntrar utsatta att söka stöd utan skam eller tvekan.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/myt-vald-sker-bara-i-vissa-relationer/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fakta-myter">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fakta-myter/"
+          aria-label="Visa fler artiklar i samlingen Fakta &amp; myter"
+        >
+          <i class="fas fas-circle-question"></i>
+          <span>Fakta &amp; myter</span>
+        </a>
+      
+      <span class="article-date">5 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/myt-barn-forstar-inte-sant-har/">Myten ”Barn förstår inte sånt här.” – Sanningen om Barns Känslighet</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad text som avlivar myten att barn inte förstår svåra händelser. Artikeln förklarar barns känslighet, varför tystnad skadar, och hur vuxna tryggt kan prata, stödja och hjälpa barn vidare till professionell hjälp.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/myt-barn-forstar-inte-sant-har/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">4 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/hur-hjalper-jag-nagon-nar-orden-kanns-svara/">Hur gör jag när jag vill hjälpa någon som mår dåligt men inte vet vad jag ska säga?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad guide om hur du stöttar någon som mår dåligt. Artikeln förklarar hur du vågar fråga om svåra ämnen, lyssnar icke-dömande, använder MI-principer och erbjuder konkret, trygg och praktisk hjälp i stunden.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/hur-hjalper-jag-nagon-nar-orden-kanns-svara/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">3 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/nar-jag-misstanker-att-nagon-utsatts-for-vald/">Hur gör jag när jag misstänker att någon är utsatt för våld?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En evidensbaserad guide om hur du bemöter någon du misstänker utsätts för våld. Artikeln förklarar våldets olika uttryck, hur du öppnar ett tryggt samtal, stärker personens autonomi och erbjuder praktiskt, långsiktigt och säkert stöd.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/nar-jag-misstanker-att-nagon-utsatts-for-vald/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="faq">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/faq/"
+          aria-label="Visa fler artiklar i samlingen Frågor &amp; svar"
+        >
+          <i class="fas fas-message-question"></i>
+          <span>Frågor &amp; svar</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/ar-stodlinjerna-professionella-eller-volontarer/">Är stödlinjerna professionella eller volontärer?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En artikel som förklarar vilka som bemannar stödlinjer. Den beskriver skillnaden mellan professionella och volontärer, hur kompetensen varierar mellan linjer och varför du alltid får ett tryggt, anonymt och respektfullt samtal oavsett vem som svarar.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/ar-stodlinjerna-professionella-eller-volontarer/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 10/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 10/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="">
+    <div class="article-card-top">
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 11/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 11/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="">
+    <div class="article-card-top">
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 12/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 12/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 3/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 3/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 4/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 4/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 5/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 5/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 6/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 6/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 7/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 7/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 8/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 8/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy 9/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy 9/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="">
+    <div class="article-card-top">
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template copy/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template copy/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="">
+    <div class="article-card-top">
+      
+      <span class="article-date">2 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/template/"></a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/template/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupning"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupning</span>
+        </a>
+      
+      <span class="article-date">1 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/krisreaktioner-vad-hander-i-din-kropp-och-hur-du-atertar-kontrollen/">Krisreaktioner - Vad händer i din kropp och hur du kan återta kontrollen</a>
+    </h3>
+
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/krisreaktioner-vad-hander-i-din-kropp-och-hur-du-atertar-kontrollen/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="handlingsguider">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/handlingsguider/"
+          aria-label="Visa fler artiklar i samlingen Handlingsguider"
+        >
+          <i class="fas fas-bolt"></i>
+          <span>Handlingsguider</span>
+        </a>
+      
+      <span class="article-date">1 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/nar-ensamheten-far-dagarna-att-flyta-ihop/">Hur gör jag när jag är ensam och dagarna flyter ihop?</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">En praktisk och forskningsbaserad guide för när ensamheten gör dagarna formlösa. Den förklarar hur du lugnar kroppens stressystem, bygger upp struktur och återupprättar trygg social kontakt för att få tillbaka kontroll och stabilitet.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/nar-ensamheten-far-dagarna-att-flyta-ihop/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+      </div>
+      <nav class="pagination" data-pagination aria-label="Artikelsidor"></nav>
+    </div>
+  </section>
+</main>
+
+    <footer class="footer-shell">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-block">
+        <div class="footer-heading"><i class="fas fas-life-ring"></i> Om Stödlinjer.se</div>
+        <p>
+          En ideell infosida som samlar svenska stödlinjer på ett ställe. Kontrollera alltid aktuella
+          tider på respektive webbplats.
+        </p>
+        <p class="footer-meta">Senast uppdaterad: manuellt underhåll – tipsa om ändringar!</p>
+      </div>
+      <div class="footer-block">
+        <div class="footer-heading"><i class="fas fas-envelope"></i> Kontakt</div>
+        <p>
+          Maila
+          <a href="mailto:info@stodlinjer.se" class="footer-link"
+            ><i class="fas fas-paper-plane"></i> info@stodlinjer.se</a
+          >
+          med förbättringar.
+        </p>
+        <a href="https://github.com/YouTubeRobski87" target="_blank" style="text-decoration: none"
+          ><p class="footer-meta">Upphovsrätt © 2025 | Robert Claesson</p></a
+        >
+      </div>
+    </div>
+    <div class="footer-quick">
+      <div class="footer-quick-links">
+        <a class="footer-link" href="#filter-heading"
+          ><i class="fas fas-magnifying-glass"></i> Sök stödlinjer</a
+        >
+        <a class="footer-link" href="tel:112"
+          ><i class="fas fas-triangle-exclamation"></i> Ring 112 vid akut fara</a
+        >
+        <a class="footer-link" href="tel:90101"
+          ><i class="fas fas-phone-volume"></i> Självmordslinjen 90101</a
+        >
+        <a class="footer-link" href="/kontakt/"
+          ><i class="fas fas-envelope-open-text"></i> Kontakta oss</a
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script type="module" src="/assets/js/app.js"></script>
+  </body>
+</html>

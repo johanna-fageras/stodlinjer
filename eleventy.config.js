@@ -72,7 +72,7 @@ module.exports = function (eleventyConfig) {
     pathPrefix,
     dir: {
       input: 'src',
-      output: 'docs'
+      output: 'site'
     },
     htmlTemplateEngine: 'njk',
     markdownTemplateEngine: 'njk',
