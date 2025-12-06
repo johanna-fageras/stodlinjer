@@ -24,7 +24,7 @@
 .quote-icon i {
   position: absolute;
   font-size: 52px;
-  color: #d87757 !important;
+  color: var(--accent) !important;
   opacity: 0.6;
   line-height: 1;
 }
@@ -79,10 +79,4 @@
 
 :root[data-theme='dark'] .quote-block {
   background: var(--card);
-}
-
-:root[data-theme='dark'] .quote-icon,
-:root[data-theme='dark'] .quote-icon i {
-  color: #f49d64 !important;
-  opacity: 0.7;
 }

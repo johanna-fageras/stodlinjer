@@ -29,7 +29,7 @@
   },
   {
     "slug": "fordjupning",
-    "title": "Fördjupning",
+    "title": "Fördjupningar",
     "summary": "Längre, tematiska artiklar som förklarar komplexa ämnen med tydlighet, forskning och sammanhang.",
     "description": "Fördjupande och evidensbaserade texter som utforskar viktiga teman inom psykisk hälsa, våld, beroende och anhörigstöd. Här får du sammanhang, bakgrund och förståelse genom längre artiklar som går bortom det grundläggande och ger en bredare kunskapsbild.",
     "icon": "fas fas-books"
@@ -40,13 +40,6 @@
     "summary": "Konkreta övningar och verktyg som hjälper dig hantera stress, ångest och krissituationer.",
     "description": "En samling evidensbaserade övningar, checklistor och praktiska metoder för att lugna kroppen, stärka din förmåga att hantera svåra känslor och skapa trygghet i vardagen. Lätt att använda, länka och återvända till vid behov.",
     "icon": "fas fas-toolbox"
-  },
-  {
-    "slug": "expertforklarat",
-    "title": "Expertförklarat",
-    "summary": "Tidlösa, evidensbaserade artiklar som förklarar psykologi, beteenden och krisreaktioner med djup och klarhet.",
-    "description": "Fördjupande och vetenskapligt grundade texter som ger tydliga förklaringar till centrala psykologiska processer, trauma, anknytning och mänskliga reaktioner i kris. Här hittar du tidlös kunskap som hjälper dig förstå dig själv och andra på djupet.",
-    "icon": "fas fas-brain"
   },
   {
     "slug": "ord-som-bar",

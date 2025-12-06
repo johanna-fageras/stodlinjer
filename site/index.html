@@ -18,11 +18,13 @@
 <!-- Prevent theme flash: set theme class before paint -->
 <script>
   (function () {
-    var t =
-      localStorage.getItem('theme') ||
-      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var allowed = ['light', 'calm', 'dark'];
+    var stored = localStorage.getItem('theme');
+    var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    var fallback = prefersDark ? 'dark' : 'light';
+    var t = allowed.indexOf(stored) !== -1 ? stored : fallback;
     document.documentElement.dataset.theme = t;
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    document.documentElement.classList.toggle('dark', t === 'dark');
   })();
 </script>
 <script>window.BASE_URL = '';</script>

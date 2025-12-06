@@ -5,11 +5,7 @@
 }
 
 .contact-card {
-  background: var(--card-strong);
-}
-
-:root[data-theme='dark'] .contact-card {
-  background: #1b1e27;
+  background: var(--card-contact);
 }
 
 .form-grid {
@@ -103,7 +99,7 @@
 .form-field select:focus,
 .form-field textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.18);
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
 
 .form-helper {
@@ -151,7 +147,7 @@
   align-items: center;
   gap: 8px;
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   border: 1px solid transparent;
   border-radius: 12px;
   padding: 12px 18px;

@@ -463,16 +463,22 @@ function applyTheme(mode) {
   const themeIcon = document.getElementById('themeIcon');
   const themeLabel = document.getElementById('themeLabel');
 
-  const isDark = mode === 'dark';
-  document.documentElement.dataset.theme = mode;
-  document.documentElement.classList.toggle('dark', isDark);
+  const themes = {
+    light: { icon: '<i class="fas fas-sun"></i>', label: 'Ljust läge' },
+    calm: { icon: '<i class="fas fas-leaf"></i>', label: 'Lugnt läge' },
+    dark: { icon: '<i class="fas fas-moon"></i>', label: 'Mörkt läge' }
+  };
+  const nextTheme = themes[mode] ? mode : 'light';
+  const meta = themes[nextTheme];
 
-  if (themeToggle) themeToggle.setAttribute('aria-pressed', isDark.toString());
-  if (themeIcon)
-    themeIcon.innerHTML = isDark ? '<i class="fas fas-moon"></i>' : '<i class="fas fas-sun"></i>';
-  if (themeLabel) themeLabel.textContent = isDark ? 'Mörkt läge' : 'Ljust läge';
+  document.documentElement.dataset.theme = nextTheme;
+  document.documentElement.classList.toggle('dark', nextTheme === 'dark');
 
-  localStorage.setItem('theme', mode);
+  if (themeToggle) themeToggle.setAttribute('aria-pressed', nextTheme !== 'light');
+  if (themeIcon) themeIcon.innerHTML = meta.icon;
+  if (themeLabel) themeLabel.textContent = meta.label;
+
+  localStorage.setItem('theme', nextTheme);
 }
 
 function initThemeToggle() {
@@ -480,13 +486,17 @@ function initThemeToggle() {
   if (!themeToggle) return;
 
   // Sync UI with current theme (already set by inline script to prevent flash)
+  const themes = ['light', 'calm', 'dark'];
   const currentTheme = document.documentElement.dataset.theme || 'light';
-  applyTheme(currentTheme);
+  const startTheme = themes.includes(currentTheme) ? currentTheme : 'light';
+  applyTheme(startTheme);
 
   // Handle toggle clicks
   themeToggle.addEventListener('click', () => {
-    const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-    applyTheme(nextTheme);
+    const active = document.documentElement.dataset.theme || 'light';
+    const idx = themes.indexOf(active);
+    const next = themes[(idx + 1) % themes.length];
+    applyTheme(next);
   });
 }
 

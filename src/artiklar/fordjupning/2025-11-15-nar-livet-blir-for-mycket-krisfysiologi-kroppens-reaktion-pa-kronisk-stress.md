@@ -2,7 +2,7 @@
 title: När livet blir för mycket - Krisfysiologi – kroppens reaktion på kronisk stress
 description: Artikeln förklarar hur kronisk stress överbelastar HPA-axeln, nervsystemet och immunförsvaret. Den visar hur långvarigt kortisolpåslag omformar hjärnan, skapar inflammation och leder till utmattning – samt varför kroppen till slut inte orkar reglera sig själv.
 date: 2025-11-15
-samling: expertforklarat
+samling: fordjupning
 readingTime: 5-6 min
 references:
   - McEwen, B. S. (1998). Stress, adaptation, and disease. Allostasis and allostatic overload. *Annals of the New York Academy of Sciences, 840*(1), 33-44.

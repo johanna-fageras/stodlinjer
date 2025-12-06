@@ -25,7 +25,7 @@
 .search-shell:focus-within {
   border-color: var(--accent);
   background: var(--card-strong);
-  box-shadow: 0 0 0 3px rgba(245, 158, 99, 0.15);
+  box-shadow: 0 0 0 3px var(--focus-ring-soft);
 }
 
 .search-panel {
@@ -44,7 +44,7 @@
   gap: 8px;
   padding: 6px 10px;
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.02);
+  background: var(--category-bg);
   color: var(--muted);
   border: none;
   font-weight: 500;
@@ -85,11 +85,11 @@
 .category-btn:hover {
   color: var(--text);
   border-color: var(--accent);
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--category-bg-hover);
 }
 
 .category-btn.is-active {
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   border-color: var(--accent);
 }

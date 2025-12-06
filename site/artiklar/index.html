@@ -16,11 +16,13 @@
 <!-- Prevent theme flash: set theme class before paint -->
 <script>
   (function () {
-    var t =
-      localStorage.getItem('theme') ||
-      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var allowed = ['light', 'calm', 'dark'];
+    var stored = localStorage.getItem('theme');
+    var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    var fallback = prefersDark ? 'dark' : 'light';
+    var t = allowed.indexOf(stored) !== -1 ? stored : fallback;
     document.documentElement.dataset.theme = t;
-    if (t === 'dark') document.documentElement.classList.add('dark');
+    document.documentElement.classList.toggle('dark', t === 'dark');
   })();
 </script>
 <script>window.BASE_URL = '';</script>
@@ -100,7 +102,7 @@
         </p>
         <div class="hero-chips">
           <span class="stat-chip"><i class="fas fas-newspaper"></i> 49 artiklar</span>
-          <span class="stat-chip"><i class="fas fas-list-check"></i> 8 samlingar</span>
+          <span class="stat-chip"><i class="fas fas-list-check"></i> 7 samlingar</span>
         </div>
       </div>
     </div>
@@ -128,8 +130,6 @@
         </button>
         
           
-          
-            
           
             
           
@@ -172,8 +172,6 @@
             
           
             
-          
-            
               
             
           
@@ -188,8 +186,6 @@
           </button>
         
           
-          
-            
           
             
               
@@ -218,8 +214,6 @@
           </button>
         
           
-          
-            
           
             
           
@@ -254,8 +248,6 @@
             
           
             
-          
-            
               
             
           
@@ -273,13 +265,11 @@
             aria-pressed="false"
             type="button"
           >
-            <span><i class="fas fas-books"></i> Fördjupning</span>
-            <span class="filter-count">14</span>
+            <span><i class="fas fas-books"></i> Fördjupningar</span>
+            <span class="filter-count">15</span>
           </button>
         
           
-          
-            
           
             
           
@@ -308,38 +298,6 @@
           </button>
         
           
-          
-            
-              
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-            
-          
-          <button
-            class="category-btn"
-            data-samling-filter="expertforklarat"
-            aria-pressed="false"
-            type="button"
-          >
-            <span><i class="fas fas-brain"></i> Expertförklarat</span>
-            <span class="filter-count">1</span>
-          </button>
-        
-          
-          
-            
           
             
           
@@ -617,10 +575,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">21 november 2025</span>
@@ -719,10 +677,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">19 november 2025</span>
@@ -821,10 +779,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">18 november 2025</span>
@@ -889,10 +847,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">17 november 2025</span>
@@ -985,40 +943,6 @@
         
           
   
-  <article class="article-card" data-samling-item="expertforklarat">
-    <div class="article-card-top">
-      
-        <a
-          class="samling-chip"
-          href="/samlingar/expertforklarat/"
-          aria-label="Visa fler artiklar i samlingen Expertförklarat"
-        >
-          <i class="fas fas-brain"></i>
-          <span>Expertförklarat</span>
-        </a>
-      
-      <span class="article-date">15 november 2025</span>
-    </div>
-
-    <h3 class="article-card-title">
-      <a href="/artiklar/expertforklarat/nar-livet-blir-for-mycket-krisfysiologi-kroppens-reaktion-pa-kronisk-stress/">När livet blir för mycket - Krisfysiologi – kroppens reaktion på kronisk stress</a>
-    </h3>
-
-    
-      <p class="article-card-excerpt">Artikeln förklarar hur kronisk stress överbelastar HPA-axeln, nervsystemet och immunförsvaret. Den visar hur långvarigt kortisolpåslag omformar hjärnan, skapar inflammation och leder till utmattning – samt varför kroppen till slut inte orkar reglera sig själv.</p>
-    
-
-    <div class="article-card-footer">
-      <a class="read-more" href="/artiklar/expertforklarat/nar-livet-blir-for-mycket-krisfysiologi-kroppens-reaktion-pa-kronisk-stress/">
-        <span>Fortsätt läs</span>
-        <i class="fas fas-arrow-right" aria-hidden="true"></i>
-      </a>
-    </div>
-  </article>
-
-        
-          
-  
   <article class="article-card" data-samling-item="faq">
     <div class="article-card-top">
       
@@ -1044,6 +968,40 @@
 
     <div class="article-card-footer">
       <a class="read-more" href="/artiklar/faq/kan-jag-ringa-for-nagon-annans-skull/">
+        <span>Fortsätt läs</span>
+        <i class="fas fas-arrow-right" aria-hidden="true"></i>
+      </a>
+    </div>
+  </article>
+
+        
+          
+  
+  <article class="article-card" data-samling-item="fordjupning">
+    <div class="article-card-top">
+      
+        <a
+          class="samling-chip"
+          href="/samlingar/fordjupning/"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
+        >
+          <i class="fas fas-books"></i>
+          <span>Fördjupningar</span>
+        </a>
+      
+      <span class="article-date">15 november 2025</span>
+    </div>
+
+    <h3 class="article-card-title">
+      <a href="/artiklar/fordjupning/nar-livet-blir-for-mycket-krisfysiologi-kroppens-reaktion-pa-kronisk-stress/">När livet blir för mycket - Krisfysiologi – kroppens reaktion på kronisk stress</a>
+    </h3>
+
+    
+      <p class="article-card-excerpt">Artikeln förklarar hur kronisk stress överbelastar HPA-axeln, nervsystemet och immunförsvaret. Den visar hur långvarigt kortisolpåslag omformar hjärnan, skapar inflammation och leder till utmattning – samt varför kroppen till slut inte orkar reglera sig själv.</p>
+    
+
+    <div class="article-card-footer">
+      <a class="read-more" href="/artiklar/fordjupning/nar-livet-blir-for-mycket-krisfysiologi-kroppens-reaktion-pa-kronisk-stress/">
         <span>Fortsätt läs</span>
         <i class="fas fas-arrow-right" aria-hidden="true"></i>
       </a>
@@ -1093,10 +1051,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">14 november 2025</span>
@@ -1229,17 +1187,17 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">12 november 2025</span>
     </div>
 
     <h3 class="article-card-title">
-      <a href="/artiklar/samtalsstod/det-traumatiserade-nervsystemet-en-guide-till-fight-flight-freeze-och-fawn/">Det traumatiserade nervsystemet - En guide till Fight, Flight, Freeze och Fawn</a>
+      <a href="/artiklar/fordjupning/det-traumatiserade-nervsystemet-en-guide-till-fight-flight-freeze-och-fawn/">Det traumatiserade nervsystemet - En guide till Fight, Flight, Freeze och Fawn</a>
     </h3>
 
     
@@ -1247,7 +1205,7 @@
     
 
     <div class="article-card-footer">
-      <a class="read-more" href="/artiklar/samtalsstod/det-traumatiserade-nervsystemet-en-guide-till-fight-flight-freeze-och-fawn/">
+      <a class="read-more" href="/artiklar/fordjupning/det-traumatiserade-nervsystemet-en-guide-till-fight-flight-freeze-och-fawn/">
         <span>Fortsätt läs</span>
         <i class="fas fas-arrow-right" aria-hidden="true"></i>
       </a>
@@ -1331,10 +1289,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">11 november 2025</span>
@@ -1535,10 +1493,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">8 november 2025</span>
@@ -1603,10 +1561,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">7 november 2025</span>
@@ -1671,10 +1629,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">6 november 2025</span>
@@ -1739,10 +1697,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">5 november 2025</span>
@@ -1773,10 +1731,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">4 november 2025</span>
@@ -1841,10 +1799,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">3 november 2025</span>
@@ -1977,10 +1935,10 @@
         <a
           class="samling-chip"
           href="/samlingar/fordjupning/"
-          aria-label="Visa fler artiklar i samlingen Fördjupning"
+          aria-label="Visa fler artiklar i samlingen Fördjupningar"
         >
           <i class="fas fas-books"></i>
-          <span>Fördjupning</span>
+          <span>Fördjupningar</span>
         </a>
       
       <span class="article-date">1 november 2025</span>

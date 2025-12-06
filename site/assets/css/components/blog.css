@@ -12,43 +12,29 @@
 }
 
 .archive-shell {
-  background-color: #f8ece0;
+  background-color: var(--bg-alt);
   background-image: none;
 }
 
-:root[data-theme='dark'] .archive-shell {
-  background-color: #121218;
-  background-image: none;
+.archive-shell .surface-card {
+  background: var(--card-alt);
 }
 
-.archive-shell .surface-card,
 .archive-shell .strong-card {
-  background: #fffefb;
-}
-
-:root[data-theme='dark'] .archive-shell .surface-card,
-:root[data-theme='dark'] .archive-shell .strong-card {
-  background: #161821;
+  background: var(--card-alt-strong);
 }
 
 .article-shell {
-  background-color: #f8ece0;
+  background-color: var(--bg-alt);
   background-image: none;
 }
 
-:root[data-theme='dark'] .article-shell {
-  background-color: #121218;
-  background-image: none;
+.article-shell .surface-card {
+  background: var(--card-alt);
 }
 
-.article-shell .surface-card,
 .article-shell .strong-card {
-  background: #fffefb;
-}
-
-:root[data-theme='dark'] .article-shell .surface-card,
-:root[data-theme='dark'] .article-shell .strong-card {
-  background: #161821;
+  background: var(--card-alt-strong);
 }
 
 .hero-chips {
@@ -217,7 +203,7 @@
 .pagination-link.is-current {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .pagination-link.is-disabled {
@@ -245,7 +231,7 @@
   gap: 8px;
   padding: 5px 8px;
   border-radius: 8px;
-  background: rgba(217, 119, 87, 0.12);
+  background: var(--accent-soft);
   color: var(--text);
   font-weight: 700;
   font-size: 13px;
@@ -255,10 +241,6 @@
 
 .samling-chip:hover {
   border-color: var(--accent);
-}
-
-:root[data-theme='dark'] .samling-chip {
-  background: rgba(255, 255, 255, 0.08);
 }
 
 .samling-chip-large {

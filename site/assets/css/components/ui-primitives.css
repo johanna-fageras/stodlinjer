@@ -26,18 +26,13 @@
   gap: 6px;
   padding: 4px 8px;
   border-radius: 6px;
-  background: rgba(239, 68, 68, 0.9);
-  color: #fff;
+  background: var(--alert);
+  color: var(--on-alert);
   font-weight: 800;
   font-size: 12px;
   letter-spacing: 0.02em;
   white-space: nowrap;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-}
-
-:root[data-theme='dark'] .badge-urgent {
-  background: rgba(239, 68, 68, 0.9);
-  color: #fff;
 }
 
 .badge-urgent-corner {
@@ -52,19 +47,13 @@
   gap: 6px;
   padding: 4px 8px;
   border-radius: 6px;
-  background: rgba(247, 145, 95, 0.12);
+  background: var(--accent-soft);
   color: var(--muted);
   font-size: 12px;
   font-weight: 500;
   font-family: 'GT Pressura', 'Athletics', system-ui, sans-serif;
   letter-spacing: 0.015em;
   border: none;
-}
-
-:root[data-theme='dark'] .tag {
-  background: rgba(255, 255, 255, 0.08);
-  font-family: 'GT Pressura', 'Athletics', system-ui, sans-serif;
-  letter-spacing: 0.015em;
 }
 
 .stat-chip {
