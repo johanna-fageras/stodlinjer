@@ -3,11 +3,12 @@
     type="button"
     class="chatbot-toggle"
     data-chatbot-toggle
-    aria-label="Öppna Stödchatten"
+    aria-label="Öppna Stödkompassen"
     aria-expanded="false"
     aria-controls="chatbot-panel"
   >
-    💬
+    <span class="chatbot-toggle__icon" aria-hidden="true"></span>
+    <span class="sr-only">Öppna Stödkompassen</span>
   </button>
 
   <section class="chatbot-panel" id="chatbot-panel" data-chatbot-panel aria-live="polite">
@@ -15,8 +16,8 @@
       <div class="chatbot-title">
         <span class="status" aria-hidden="true"></span>
         <div>
-          <h3>Stödchatten</h3>
-          <small class="chatbot-hint">Svar på svenska, med innehåll från sajten.</small>
+          <h3>Stödkompassen</h3>
+          <small class="chatbot-hint">Du behöver inte veta vad du ska säga.</small>
         </div>
       </div>
       <button type="button" class="chatbot-send" data-chatbot-close aria-label="Stäng chatten">

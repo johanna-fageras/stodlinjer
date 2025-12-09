@@ -19,6 +19,8 @@ Byggt med **Eleventy (11ty)** och Nunjucks-mallar, med data i JSON-filer under `
 - 🔍 **Sökbar lista** med 21+ svenska stödlinjer
 - 🏷️ **Kategorifiltrering** — psykisk hälsa, barn & unga, våld, missbruk, äldre
 - #️⃣ **Taggfiltrering** för detaljerad sökning
+- 🤖 **Stödchatten (AI)** som svarar på svenska och använder innehållet på sajten + externa källor
+- 🔗 **Klickbara källor** i chatbotten (artiklar, stödlinjer, externa länkar)
 - 🌓 **Ljust/mörkt tema** med automatisk systempreferens
 - 🔗 **URL-baserad sökning** (`?q=sökterm`) för delning och schema.org SearchAction
 - 📱 **Responsiv design** för mobil, surfplatta och desktop
@@ -41,11 +43,19 @@ Lokalt utvecklingsläge med live-reload:
 npm run serve
 ```
 
-Bygg statisk sajt (till `site/`, konfigurerat för GitHub Pages):
+Bygg statisk sajt (output till `site/`):
 
 ```bash
 npm run build
 ```
+
+Generera innehållsindexet som används av stödchatten (laddar artiklar + JSON-data till `.chatdata/content-index.json`):
+
+```bash
+npm run index:content
+```
+
+Kör gärna `npm run index:content && npm run build` innan deploy om innehållet har ändrats.
 
 ---
 
@@ -57,6 +67,7 @@ src/
 ├── kontakt.njk             # Kontaktformulär
 ├── _data/
 │   ├── support-lines.json  # Alla stödlinjer
+│   ├── chatbot.json        # Konfiguration för stödchatten (API-url, externa källor)
 │   └── quotes.json         # Motiverande citat
 ├── _includes/
 │   ├── layouts/base.njk
@@ -66,6 +77,8 @@ src/
     ├── js/                 # app.js, tailwind-config.js
     └── fonts/              # Ikon- och typsnitts-filer
 ```
+
+Chatbotens innehållsindex skrivs till `.chatdata/content-index.json` (genereras, inte manuellt redigerad).
 
 Output: `site/` (Eleventy skriver färdiga HTML-filer och kopierar assets).
 
@@ -116,20 +129,46 @@ All data finns i `src/_data/support-lines.json`. Varje stödlinje följer detta 
 
 ---
 
+## 🤖 Stödchatten
+
+- Ligger som komponent i `src/_includes/partials/chatbot.njk` och aktiveras av `src/assets/js/chatbot.js`.
+- Backend via Netlify Function `/.netlify/functions/chat` (fil: `netlify/functions/chat.js`).
+- Använder ett genererat innehållsindex + `src/_data/chatbot.json` för externa källor (1177, Mind m.fl.).
+- Kräver miljövariabeln `OPENAI_API_KEY` för AI-svar. Utan nyckel visar chatten fallbackförslag från innehållsindexet.
+- Källor i chatten (artiklar, stödlinjer, externa länkar) är klickbara.
+
+### Uppdatera chatbotens index
+
+Kör efter innehållsändringar (nya artiklar eller uppdaterade JSON-data):
+
+```bash
+npm run index:content
+```
+
+Den genererar `.chatdata/content-index.json` som laddas av frontenden.
+
+### Konfiguration
+
+- Redigera `src/_data/chatbot.json` för att uppdatera externa resurser som chatten kan föreslå.
+- Miljövariabler (lägg i `.env` eller i Netlify/GitHub Secrets):
+  - `OPENAI_API_KEY` — krävs för att anropa OpenAI i Netlify-funktionen.
+
+---
+
 ## 🎨 Design
 
-Webbplatsen använder ett varmt, lugnt färgschema med fokus på tillgänglighet och läsbarhet:
+Webbplatsen använder ett mjukt lavendel-/grått färgschema (light/dark/calm) med fokus på tillgänglighet och läsbarhet:
 
-- **Ljust tema:** Krämvit bakgrund med varma accenter
-- **Mörkt tema:** Djupgrå/svart bakgrund med mjukare accenter
-- **Accentfärg:** Varm orange/terrakotta (`#d97757`)
-- **Typografi:** Athletics (sans-serif) med optimerade vikter och radavstånd
+- **Ljust tema:** Ljust lavendel/kräm med mjuka kontraster
+- **Mörkt tema:** Dämpat mörkgrått med ljusa accenter
+- **Accentfärg:** Lavendel/steel (`--accent: #8a8ec4`) och variationer per tema
+- **Typografi:** Söhne (sans-serif) med optimerade vikter och radavstånd
 
 ---
 
 ## 🚀 Publicering
 
-Konfigurerad för **GitHub Pages** genom att bygga till `site/`. Kör `npm run build` och pusha — Pages serverar innehållet direkt från `site/`.
+Static build till `site/` (Netlify-konfig i `netlify.toml`). Kör `npm run index:content && npm run build` inför deploy så att chatbotens index är uppdaterat.
 
 ---
 

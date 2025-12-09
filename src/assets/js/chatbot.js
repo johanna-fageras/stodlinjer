@@ -10,8 +10,7 @@ const chatbotState = {
 };
 
 const CHATBOT_COPY = {
-  intro:
-    'Hej! Jag lyfter fram innehåll från sajten, stödlinjer och utvalda källor. Skriv din fråga så hittar vi rätt stöd tillsammans.',
+  intro: 'Hej. Hur är det med dig?',
   unavailable:
     'Jag saknar AI-anslutning just nu, men här är innehåll jag hittade som matchar din fråga.'
 };
@@ -80,7 +79,9 @@ function rankEntries(query, limit = 5) {
 
   return chatbotState.contentIndex
     .map((entry) => {
-      const haystack = `${entry.title || ''} ${entry.content || ''} ${(entry.tags || []).join(' ')}`.toLowerCase();
+      const haystack = `${entry.title || ''} ${entry.content || ''} ${(entry.tags || []).join(
+        ' '
+      )}`.toLowerCase();
       let score = 0;
       tokens.forEach((token) => {
         if (!token) return;
@@ -102,7 +103,8 @@ function buildContext(query) {
     title: entry.title,
     type: entry.type,
     samling: entry.samling,
-    content: (entry.content || '').slice(0, 1200)
+    content: (entry.content || '').slice(0, 1200),
+    url: entryUrl(entry)
   }));
 }
 
@@ -118,7 +120,9 @@ function formatFallback(context) {
     .slice(0, 3)
     .map((item) => {
       const excerpt = (item.content || '').replace(/\s+/g, ' ').slice(0, 180);
-      return `• ${item.title} (${item.type}${item.samling ? ` · ${item.samling}` : ''}): ${excerpt}…`;
+      return `• ${item.title} (${item.type}${
+        item.samling ? ` · ${item.samling}` : ''
+      }): ${excerpt}…`;
     })
     .join('\n');
 
@@ -221,8 +225,11 @@ function initChatbot() {
       if (apiResult && apiResult.answer) {
         const sourceTags = (apiResult.sources || []).map((src) => ({
           title: src.title || src.id || 'Källa',
-          url: src.url,
-          type: src.type || 'link'
+          url: src.url || entryUrl(src),
+          type: src.type || 'link',
+          contactTypes: src.contactTypes,
+          phone: src.phone,
+          hours: src.hoursLabel || src.hours
         }));
         renderMessage(log, { role: 'bot', content: apiResult.answer, sources: sourceTags });
         chatbotState.messages.push({ role: 'assistant', content: apiResult.answer });

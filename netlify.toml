@@ -1,6 +1,6 @@
-[build]
-  command = "npm run build"
-  publish = "site"
+[functions]
+  directory = "netlify/functions"
 
-[build.environment]
-  ELEVENTY_PATH_PREFIX = "/"
+[build]
+  publish = "site"
+  command = "npm run build"

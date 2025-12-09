@@ -22,3 +22,9 @@ site/
 
 # Package manager files
 package-lock.json
+
+# Local Netlify folder
+.netlify/
+
+# Misc
+chatbot-prompt.md
