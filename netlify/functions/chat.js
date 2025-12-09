@@ -223,7 +223,7 @@ function formatContext(context, externalSources) {
 function entryUrl(entry) {
   if (!entry || !entry.id) return null;
   if (entry.type === 'artikel') {
-    return `/${entry.id.replace(/^\\/+/, '')}/`;
+    return `/${entry.id.replace(/^\/+/, '')}/`;
   }
   return null;
 }
