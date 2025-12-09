@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv-SE" data-theme="light">
+<html lang="sv-SE" data-theme="light" data-color-scheme="lavender">
   <head>
     
 <meta charset="UTF-8" />
@@ -15,16 +15,15 @@
 <link rel="canonical" href="https://stodlinjer.se/kontakt/" />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#0f1724" />
-<!-- Prevent theme flash: set theme class before paint -->
+<!-- Prevent theme flash: set theme + color scheme before paint -->
 <script>
   (function () {
-    var allowed = ['light', 'calm', 'dark'];
-    var stored = localStorage.getItem('theme');
+    var storedTheme = localStorage.getItem('theme-mode') || localStorage.getItem('theme');
     var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
-    var fallback = prefersDark ? 'dark' : 'light';
-    var t = allowed.indexOf(stored) !== -1 ? stored : fallback;
-    document.documentElement.dataset.theme = t;
-    document.documentElement.classList.toggle('dark', t === 'dark');
+    var theme = storedTheme === 'dark' ? 'dark' : prefersDark ? 'dark' : 'light';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.colorScheme = 'lavender';
+    document.documentElement.classList.toggle('dark', theme === 'dark');
   })();
 </script>
 <script>window.BASE_URL = '';</script>
@@ -73,10 +72,16 @@
           </a>
         
       
-      <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="true">
-        <span id="themeIcon" aria-hidden="true"><i class="fas fas-moon"></i></span>
-        <span id="themeLabel">Mörkt läge</span>
-      </button>
+
+      <div class="theme-controls" aria-label="Utseende">
+        <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="false">
+          <span id="themeIcon" aria-hidden="true">
+            <span class="theme-icon sun"><i class="fas fas-sun"></i></span>
+            <span class="theme-icon moon"><i class="fas fas-moon"></i></span>
+          </span>
+          <span id="themeLabel" class="sr-only">Ljust läge</span>
+        </button>
+      </div>
     </div>
   </div>
 </header>
@@ -92,7 +97,7 @@
               <span class="pill"><i class="fas fas-envelope-circle-check"></i> Hör av dig</span>
               <span class="stat-chip"><i class="far far-clock"></i> Svar inom 1-2 dagar</span>
             </div>
-            <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-slate-900 dark:text-white">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-3 text-slate-900 dark:text-white">
               Hör av dig till oss
             </h2>
             <p class="text-lg muted mb-6">
@@ -178,7 +183,7 @@
 
           <div class="surface-card p-6 sm:p-7 flex flex-col gap-4">
             <div class="pill w-fit"><i class="fas fas-compass"></i> Snabb info</div>
-            <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Andra sätt att nå oss</h3>
+            <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Andra sätt att nå oss</h3>
             <div class="flex flex-col gap-3 text-sm sm:text-base">
               <div class="contact-row">
                 <span class="card-icon" aria-hidden="true"><i class="fas fas-envelope"></i></span>
@@ -246,7 +251,7 @@
       <!-- Info Block -->
       <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
         <div class="surface-card p-6 sm:p-8">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
             Varför vi ber om detaljer
           </h2>
           <p class="muted leading-relaxed mb-3">

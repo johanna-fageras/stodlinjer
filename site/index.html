@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sv-SE" data-theme="light">
+<html lang="sv-SE" data-theme="light" data-color-scheme="lavender">
   <head>
     
 <meta charset="UTF-8" />
@@ -15,16 +15,15 @@
 <link rel="canonical" href="https://stodlinjer.se/" />
 <meta name="color-scheme" content="light dark" />
 <meta name="theme-color" content="#0f1724" />
-<!-- Prevent theme flash: set theme class before paint -->
+<!-- Prevent theme flash: set theme + color scheme before paint -->
 <script>
   (function () {
-    var allowed = ['light', 'calm', 'dark'];
-    var stored = localStorage.getItem('theme');
+    var storedTheme = localStorage.getItem('theme-mode') || localStorage.getItem('theme');
     var prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
-    var fallback = prefersDark ? 'dark' : 'light';
-    var t = allowed.indexOf(stored) !== -1 ? stored : fallback;
-    document.documentElement.dataset.theme = t;
-    document.documentElement.classList.toggle('dark', t === 'dark');
+    var theme = storedTheme === 'dark' ? 'dark' : prefersDark ? 'dark' : 'light';
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.dataset.colorScheme = 'lavender';
+    document.documentElement.classList.toggle('dark', theme === 'dark');
   })();
 </script>
 <script>window.BASE_URL = '';</script>
@@ -73,10 +72,16 @@
           </a>
         
       
-      <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="true">
-        <span id="themeIcon" aria-hidden="true"><i class="fas fas-moon"></i></span>
-        <span id="themeLabel">Mörkt läge</span>
-      </button>
+
+      <div class="theme-controls" aria-label="Utseende">
+        <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="false">
+          <span id="themeIcon" aria-hidden="true">
+            <span class="theme-icon sun"><i class="fas fas-sun"></i></span>
+            <span class="theme-icon moon"><i class="fas fas-moon"></i></span>
+          </span>
+          <span id="themeLabel" class="sr-only">Ljust läge</span>
+        </button>
+      </div>
     </div>
   </div>
 </header>
@@ -97,7 +102,7 @@
             ><i class="far far-clock"></i> Dygnet runt</span
           >
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold mb-3 text-slate-900 dark:text-white">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-3 text-slate-900 dark:text-white">
           Vid akut kris – ring nu och få stöd direkt
         </h2>
         <p class="text-lg muted mb-6">
@@ -170,7 +175,7 @@
         <div class="pill w-fit">
           <i class="fas fas-compass"></i> Vad du hittar här
         </div>
-        <h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">Snabb väg till rätt stödlinje</h3>
+        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Snabb väg till rätt stödlinje</h3>
         <ul class="space-y-3 text-sm sm:text-base muted">
           
             <li class="flex gap-3">
@@ -208,7 +213,7 @@
   
   <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-5 sm:pb-7">
     <div class="surface-card p-6 sm:p-8 mb-3 sm:mb-5">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
         Hitta den stödlinje som passar dig bäst
       </h2>
       
@@ -249,7 +254,7 @@
     <div class="surface-card search-panel p-6 sm:p-7">
       <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-5">
         <div>
-          <h2 id="filter-heading" class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
+          <h2 id="filter-heading" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
             Sök bland stödlinjer
           </h2>
           <p class="text-sm muted">Filtrera på område eller sök efter namn, nummer eller beskrivning.</p>
@@ -332,7 +337,7 @@
   
   <article class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 sm:pb-14">
     <div class="surface-card p-6 sm:p-8">
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-3">
         För dig som är anhörig eller närstående
       </h2>
       
@@ -382,7 +387,7 @@
         </p>
       </section>
 
-      <section class="surface-card p-6" style="border: 3px solid rgba(239, 68, 68, 0.9)">
+      <section class="surface-card p-6" style="border: 3px solid var(--alert)">
         <h2 class="text-xl font-bold text-slate-900 dark:text-white mb-2">När ska jag ringa 112?</h2>
         <p class="muted text-sm leading-relaxed">
           Ring <strong>112</strong> vid akuta, livshotande situationer – till exempel om någon inte andas, har tagit en överdos, är allvarligt skadad eller om du upplever att det finns omedelbar fara för liv.

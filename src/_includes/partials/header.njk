@@ -24,10 +24,16 @@
           </a>
         {% endfor %}
       {% endif %}
-      <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="true">
-        <span id="themeIcon" aria-hidden="true"><i class="fas fas-moon"></i></span>
-        <span id="themeLabel">Mörkt läge</span>
-      </button>
+
+      <div class="theme-controls" aria-label="Utseende">
+        <button id="themeToggle" type="button" class="theme-toggle" aria-pressed="false">
+          <span id="themeIcon" aria-hidden="true">
+            <span class="theme-icon sun"><i class="fas fas-sun"></i></span>
+            <span class="theme-icon moon"><i class="fas fas-moon"></i></span>
+          </span>
+          <span id="themeLabel" class="sr-only">Ljust läge</span>
+        </button>
+      </div>
     </div>
   </div>
 </header>

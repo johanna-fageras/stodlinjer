@@ -74,7 +74,7 @@
   color: var(--accent);
   font-weight: 800;
   text-decoration: none;
-  font-family: 'GT Pressura', 'Athletics', system-ui, sans-serif;
+  font-family: 'Söhne', system-ui, sans-serif;
   letter-spacing: 0.02em;
 }
 
@@ -115,7 +115,7 @@ h3 a.card-title-link {
 }
 
 .phone-number {
-  font-family: 'GT Pressura', 'Athletics', system-ui, sans-serif;
+  font-family: 'Söhne', system-ui, sans-serif;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.03em;

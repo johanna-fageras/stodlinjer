@@ -1,82 +1,82 @@
 :root {
   /* Light theme */
-  --bg: #fdf8f3;
+  --bg: #f8f7fc;
   --bg-pattern: linear-gradient(
     180deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(252, 244, 237, 0.92) 45%,
-    rgba(248, 236, 224, 0.9) 100%
+    rgba(248, 247, 252, 0.98) 0%,
+    rgba(243, 242, 249, 0.97) 45%,
+    rgba(236, 234, 246, 0.95) 100%
   );
-  --card: #ffffff;
-  --card-strong: #fffaf3;
-  --border: #e7d9c9;
-  --text: #1f2937;
-  --muted: #5b6470;
-  --muted-soft: #7b8490;
-  --pill: #f7ede3;
-  --pill-text: #2f3945;
-  --accent: #d97757;
-  --accent-2: #c65f3d;
-  --accent-3: #f4a261;
-  --accent-rgb: 217, 119, 87;
-  --accent-soft: rgba(217, 119, 87, 0.12);
-  --focus-ring: rgba(217, 119, 87, 0.18);
-  --focus-ring-soft: rgba(217, 119, 87, 0.15);
-  --category-bg: rgba(0, 0, 0, 0.02);
-  --category-bg-hover: rgba(0, 0, 0, 0.04);
+  --card: #fbfafe;
+  --card-strong: #f5f3fb;
+  --border: #dcd8ec;
+  --text: #2f2e3a;
+  --muted: #5a5966;
+  --muted-soft: #737283;
+  --pill: #edeaf7;
+  --pill-text: #2f2e3a;
+  --accent: #8a8ec4;
+  --accent-2: #6b6fa6;
+  --accent-3: #b7b9e0;
+  --accent-rgb: 138, 142, 196;
+  --accent-soft: rgba(138, 142, 196, 0.14);
+  --focus-ring: rgba(138, 142, 196, 0.2);
+  --focus-ring-soft: rgba(138, 142, 196, 0.15);
+  --category-bg: rgba(47, 46, 58, 0.04);
+  --category-bg-hover: rgba(47, 46, 58, 0.07);
   --on-accent: #ffffff;
-  --alert: rgba(239, 68, 68, 0.9);
+  --alert: rgba(215, 70, 123, 0.95);
   --on-alert: #ffffff;
-  --bg-alt: #f8ece0;
-  --card-alt: #fffefb;
-  --card-alt-strong: #fffefb;
-  --bg-solid: #f8ece0;
-  --card-solid: #fffdf8;
-  --card-solid-strong: #fff7ed;
-  --card-contact: #fffaf3;
-  --shadow-soft: 0 12px 30px rgba(31, 41, 55, 0.08);
-  --shadow: 0 6px 14px rgba(31, 41, 55, 0.06);
-  --shadow-strong: 0 10px 22px rgba(31, 41, 55, 0.1);
+  --bg-alt: #f2f0fa;
+  --card-alt: #f7f5fc;
+  --card-alt-strong: #f1eef9;
+  --bg-solid: #f2f0fa;
+  --card-solid: #fbfafe;
+  --card-solid-strong: #f5f3fb;
+  --card-contact: #f5f3fb;
+  --shadow-soft: 0 12px 30px rgba(47, 46, 58, 0.08);
+  --shadow: 0 6px 14px rgba(47, 46, 58, 0.06);
+  --shadow-strong: 0 10px 22px rgba(47, 46, 58, 0.1);
   color-scheme: light;
 }
 
 :root[data-theme='dark'] {
   /* Dark theme */
-  --bg: #0f0f12;
+  --bg: #1a1a21;
   --bg-pattern: linear-gradient(
     180deg,
-    rgba(18, 18, 24, 0.96) 0%,
-    rgba(12, 12, 18, 0.98) 60%,
-    rgba(10, 10, 14, 1) 100%
+    rgba(26, 26, 33, 0.97) 0%,
+    rgba(22, 22, 28, 0.98) 60%,
+    rgba(18, 18, 23, 1) 100%
   );
-  --card: #13141a;
-  --card-strong: #171821;
-  --border: #1f2530;
-  --text: #e6e7ec;
-  --muted: #a9adb7;
-  --muted-soft: #cfd2d9;
-  --pill: #181924;
-  --pill-text: #e6e7ec;
-  --accent: #f59e63;
-  --accent-2: #f6ad78;
-  --accent-3: #8bd6c0;
-  --accent-rgb: 245, 158, 99;
+  --card: #21212a;
+  --card-strong: #272730;
+  --border: #393946;
+  --text: #e4e3ed;
+  --muted: #a6a5b4;
+  --muted-soft: #c2c1ce;
+  --pill: #2a2a35;
+  --pill-text: #e4e3ed;
+  --accent: #9a9ed4;
+  --accent-2: #adafe0;
+  --accent-3: #484a68;
+  --accent-rgb: 154, 158, 212;
   --accent-soft: rgba(255, 255, 255, 0.08);
-  --focus-ring: rgba(245, 158, 99, 0.22);
-  --focus-ring-soft: rgba(245, 158, 99, 0.18);
+  --focus-ring: rgba(154, 158, 212, 0.22);
+  --focus-ring-soft: rgba(154, 158, 212, 0.18);
   --category-bg: rgba(255, 255, 255, 0.04);
   --category-bg-hover: rgba(255, 255, 255, 0.08);
-  --on-accent: #0f172a;
-  --bg-alt: #121218;
-  --card-alt: #161821;
-  --card-alt-strong: #161821;
-  --bg-solid: #121218;
-  --card-solid: #13141a;
-  --card-solid-strong: #171821;
-  --card-contact: #1b1e27;
-  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.28);
-  --shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
-  --shadow-strong: 0 10px 22px rgba(0, 0, 0, 0.28);
+  --on-accent: #18181e;
+  --bg-alt: #1e1e27;
+  --card-alt: #24232e;
+  --card-alt-strong: #292835;
+  --bg-solid: #1e1e27;
+  --card-solid: #222129;
+  --card-solid-strong: #27262f;
+  --card-contact: #262530;
+  --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.32);
+  --shadow: 0 6px 16px rgba(0, 0, 0, 0.26);
+  --shadow-strong: 0 10px 22px rgba(0, 0, 0, 0.32);
   color-scheme: dark;
 }
 
@@ -127,7 +127,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Athletics', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+  font-family: 'Söhne', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
     sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -146,6 +146,12 @@ body.solid-bg-shell {
   background-image: none;
 }
 
+:root.theme-transition,
+:root.theme-transition * {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease,
+    box-shadow 180ms ease, fill 180ms ease, stroke 180ms ease, outline-color 180ms ease;
+}
+
 :root[data-theme='dark'] body.solid-bg-shell,
 :root[data-theme='calm'] body.solid-bg-shell {
   background: var(--bg-solid);
@@ -153,12 +159,12 @@ body.solid-bg-shell {
 }
 
 /* ==========================================================================
-   Typography Scale & Rhythm for Athletics
+   Typography Scale & Rhythm for Söhne
    ========================================================================== */
 
 .page-shell h1 {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.2;
   color: var(--text);
@@ -252,9 +258,9 @@ body.solid-bg-shell {
   font-weight: 700;
 }
 
-/* Medium weight for UI elements (Athletics has no 600, use 500) */
+/* Medium weight for UI elements (Söhne supports full weight range) */
 .page-shell .font-semibold {
-  font-weight: 500 !important;
+  font-weight: 600 !important;
 }
 
 .page-shell .font-bold {
@@ -279,7 +285,7 @@ body.solid-bg-shell {
    ========================================================================== */
 
 .phone-number {
-  font-family: 'Athletics', system-ui, sans-serif;
+  font-family: 'Söhne', system-ui, sans-serif;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.04em;

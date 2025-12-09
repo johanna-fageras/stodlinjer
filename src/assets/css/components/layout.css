@@ -6,7 +6,7 @@
 }
 
 .strong-card {
-  background: var(--card-strong);
+  background: var(--card);
   border: none;
   border-radius: 8px;
   box-shadow: var(--shadow-strong);

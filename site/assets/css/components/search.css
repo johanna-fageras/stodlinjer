@@ -24,7 +24,7 @@
 
 .search-shell:focus-within {
   border-color: var(--accent);
-  background: var(--card-strong);
+  background: var(--card);
   box-shadow: 0 0 0 3px var(--focus-ring-soft);
 }
 

@@ -39,6 +39,8 @@ const state = {
   isLoading: true
 };
 
+let themeTransitionTimer;
+
 // ==========================================================================
 // Loading State
 // ==========================================================================
@@ -216,7 +218,7 @@ function renderLines() {
         <div class="card-title">
           <span class="card-icon">${categoryIcon(line.category)}</span>
           <div>
-            <h3 class="text-lg font-extrabold mb-1" itemprop="name">
+            <h3 class="text-lg font-bold mb-1" itemprop="name">
               ${
                 line.url
                   ? `<a href="${line.url}" target="_blank" rel="noopener noreferrer" class="card-title-link">${line.name}</a>`
@@ -454,50 +456,56 @@ function initArticleFilters() {
   }
 }
 
-// ==========================================================================
-// Theme Toggle
-// ==========================================================================
-
-function applyTheme(mode) {
+function applyThemeMode(mode) {
+  const themeMode = mode === 'dark' ? 'dark' : 'light';
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = document.getElementById('themeIcon');
   const themeLabel = document.getElementById('themeLabel');
 
-  const themes = {
-    light: { icon: '<i class="fas fas-sun"></i>', label: 'Ljust läge' },
-    calm: { icon: '<i class="fas fas-leaf"></i>', label: 'Lugnt läge' },
-    dark: { icon: '<i class="fas fas-moon"></i>', label: 'Mörkt läge' }
-  };
-  const nextTheme = themes[mode] ? mode : 'light';
-  const meta = themes[nextTheme];
+  // Smooth transition to reduce flicker
+  document.documentElement.classList.add('theme-transition');
+  if (themeTransitionTimer) clearTimeout(themeTransitionTimer);
+  themeTransitionTimer = setTimeout(() => {
+    document.documentElement.classList.remove('theme-transition');
+  }, 220);
 
-  document.documentElement.dataset.theme = nextTheme;
-  document.documentElement.classList.toggle('dark', nextTheme === 'dark');
+  document.documentElement.dataset.theme = themeMode;
+  document.documentElement.classList.toggle('dark', themeMode === 'dark');
 
-  if (themeToggle) themeToggle.setAttribute('aria-pressed', nextTheme !== 'light');
-  if (themeIcon) themeIcon.innerHTML = meta.icon;
-  if (themeLabel) themeLabel.textContent = meta.label;
+  if (themeToggle) themeToggle.setAttribute('aria-pressed', themeMode === 'dark');
+  if (themeIcon) themeIcon.classList.toggle('is-dark', themeMode === 'dark');
+  if (themeLabel) themeLabel.textContent = themeMode === 'dark' ? 'Mörkt läge' : 'Ljust läge';
 
-  localStorage.setItem('theme', nextTheme);
+  localStorage.setItem('theme-mode', themeMode);
+  syncThemeMeta();
 }
 
-function initThemeToggle() {
+function syncThemeMeta() {
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (!meta) return;
+  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
+  if (accent) meta.setAttribute('content', accent);
+}
+
+function initThemeControls() {
   const themeToggle = document.getElementById('themeToggle');
   if (!themeToggle) return;
 
-  // Sync UI with current theme (already set by inline script to prevent flash)
-  const themes = ['light', 'calm', 'dark'];
-  const currentTheme = document.documentElement.dataset.theme || 'light';
-  const startTheme = themes.includes(currentTheme) ? currentTheme : 'light';
-  applyTheme(startTheme);
+  const html = document.documentElement;
+  const legacyTheme = localStorage.getItem('theme');
+  const storedTheme =
+    html.dataset.theme || localStorage.getItem('theme-mode') || (legacyTheme === 'dark' && 'dark');
 
-  // Handle toggle clicks
-  themeToggle.addEventListener('click', () => {
-    const active = document.documentElement.dataset.theme || 'light';
-    const idx = themes.indexOf(active);
-    const next = themes[(idx + 1) % themes.length];
-    applyTheme(next);
-  });
+  const startTheme = storedTheme === 'dark' ? 'dark' : 'light';
+
+  applyThemeMode(startTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+      applyThemeMode(next);
+    });
+  }
 }
 
 // ==========================================================================
@@ -522,7 +530,7 @@ function initUrlSearch() {
 // ==========================================================================
 
 function init() {
-  initThemeToggle();
+  initThemeControls();
   initQuote();
   initArticleFilters();
 
