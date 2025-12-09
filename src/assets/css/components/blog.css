@@ -31,6 +31,7 @@
 
 .article-shell .surface-card {
   background: var(--card-alt);
+  background: color-mix(in srgb, var(--card-alt) 68%, #fff);
 }
 
 .article-shell .strong-card {
