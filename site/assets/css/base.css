@@ -18,6 +18,7 @@
   --accent: #8a8ec4;
   --accent-2: #6b6fa6;
   --accent-3: #b7b9e0;
+  --accent-4: #60649f;
   --accent-rgb: 138, 142, 196;
   --accent-soft: rgba(138, 142, 196, 0.14);
   --focus-ring: rgba(138, 142, 196, 0.2);
@@ -60,6 +61,7 @@
   --accent: #9a9ed4;
   --accent-2: #adafe0;
   --accent-3: #484a68;
+  --accent-4: #bcbee6;
   --accent-rgb: 154, 158, 212;
   --accent-soft: rgba(255, 255, 255, 0.08);
   --focus-ring: rgba(154, 158, 212, 0.22);

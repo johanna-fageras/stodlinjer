@@ -9,19 +9,26 @@ const chatbotState = {
   sources: CHATBOT_CONFIG.externalSources || []
 };
 
+function getRandomGreeting() {
+  const greetings = CHATBOT_CONFIG.greetings || ['Hej. Hur är det med dig?'];
+  return greetings[Math.floor(Math.random() * greetings.length)];
+}
+
 const CHATBOT_COPY = {
-  intro: 'Hej. Hur är det med dig?',
   unavailable:
     'Jag saknar AI-anslutning just nu, men här är innehåll jag hittade som matchar din fråga.'
 };
 
 function renderMessage(logEl, { role, content, sources = [] }) {
-  const el = document.createElement('div');
-  el.className = `chatbot-message ${role}`;
+  const row = document.createElement('div');
+  row.className = `chatbot-message-row ${role}`;
+
+  const bubble = document.createElement('div');
+  bubble.className = `chatbot-message ${role}`;
   const lines = (content || '').split('\n');
   lines.forEach((line, idx) => {
-    el.appendChild(document.createTextNode(line));
-    if (idx < lines.length - 1) el.appendChild(document.createElement('br'));
+    bubble.appendChild(document.createTextNode(line));
+    if (idx < lines.length - 1) bubble.appendChild(document.createElement('br'));
   });
 
   if (sources.length) {
@@ -51,10 +58,11 @@ function renderMessage(logEl, { role, content, sources = [] }) {
       }
       wrap.appendChild(tag);
     });
-    el.appendChild(wrap);
+    bubble.appendChild(wrap);
   }
 
-  logEl.appendChild(el);
+  row.appendChild(bubble);
+  logEl.appendChild(row);
   logEl.scrollTop = logEl.scrollHeight;
 }
 
@@ -184,7 +192,7 @@ function initChatbot() {
     toggle.classList.toggle('is-hidden', chatbotState.isOpen);
   };
 
-  renderMessage(log, { role: 'bot', content: CHATBOT_COPY.intro });
+  renderMessage(log, { role: 'bot', content: getRandomGreeting() });
   if (emptyState) emptyState.remove();
 
   toggle.addEventListener('click', () => {
