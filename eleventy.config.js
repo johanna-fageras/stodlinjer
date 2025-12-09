@@ -1,10 +1,14 @@
 const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || '/';
 const samlingarData = require('./src/_data/samlingar.json');
+const { generateContentIndex } = require('./scripts/generate-content-index');
 
 module.exports = function (eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy('src/assets');
   eleventyConfig.addPassthroughCopy({ 'src/_data': 'data' });
+  eleventyConfig.addPassthroughCopy({ '.chatdata': 'chatdata' });
+
+  eleventyConfig.addFilter('json', (value) => JSON.stringify(value));
 
   // Make baseUrl available in templates
   eleventyConfig.addGlobalData('baseUrl', pathPrefix === '/' ? '' : pathPrefix);
@@ -66,6 +70,10 @@ module.exports = function (eleventyConfig) {
         items: entry.items.sort((a, b) => b.date - a.date)
       }))
       .sort((a, b) => a.title.localeCompare(b.title, 'sv'));
+  });
+
+  eleventyConfig.on('eleventy.before', async () => {
+    await generateContentIndex();
   });
 
   return {

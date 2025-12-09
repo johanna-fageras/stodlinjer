@@ -3,6 +3,7 @@
 Thumbs.db
 .vscode/
 .idea/
+.chatdata/
 
 # Node
 node_modules/
