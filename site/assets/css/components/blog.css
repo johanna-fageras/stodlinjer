@@ -375,7 +375,7 @@
   max-width: 780px;
   line-height: 1.8;
   color: var(--text);
-  font-family: 'Baskerville Neo Small', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
   font-size: 1.05rem;
   letter-spacing: 0.01em;
 }
@@ -417,7 +417,7 @@
 }
 
 .post-content p:first-of-type::first-letter {
-  font-family: 'Baskerville Neo Small', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
   font-weight: 700;
   float: left;
   font-size: 3.1rem;
@@ -439,7 +439,7 @@
   color: var(--text);
   border-radius: 8px;
   font-style: italic;
-  font-family: 'Baskerville Neo Small', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
 }
 
 .post-content ul,
@@ -490,5 +490,5 @@
 .reference-list li {
   margin: 0;
   line-height: 1.6;
-  font-family: 'Baskerville Neo Small', 'Georgia', 'Times New Roman', serif;
+  font-family: 'Lora', 'Georgia', 'Times New Roman', serif;
 }
