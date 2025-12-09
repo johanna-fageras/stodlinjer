@@ -25,6 +25,7 @@ package-lock.json
 
 # Local Netlify folder
 .netlify/
+demo.lock
 
 # Misc
 chatbot-prompt.md
