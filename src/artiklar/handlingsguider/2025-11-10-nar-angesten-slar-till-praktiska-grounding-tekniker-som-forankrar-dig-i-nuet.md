@@ -2,7 +2,7 @@
 title: När ångesten slår till - Praktiska "grounding"-tekniker som förankrar dig i nuet
 description: Artikeln beskriver effektiva grounding-tekniker som hjälper vid akut ångest, panik och overklighetskänslor. Den förklarar hur sensoriska, fysiska och kognitiva metoder lugnar nervsystemet och återför dig till nuet på ett tryggt, konkret sätt.
 date: 2025-11-10
-samling: praktiska-verktyg
+samling: handlingsguider
 readingTime: 5 min
 references:
   - American Psychological Association. (2020). *Therapy - Grounding Techniques*. Hämtad från https://www.apa.org/ (Referensen till APA används här för att indikera att dykreflexen och liknande tekniker är erkända i kliniska sammanhang, även om en direkt publikationstitel saknas.)

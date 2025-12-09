@@ -1,8 +1,8 @@
 ---
-title: När natten är jobbigast - Neurobiologin bakom mörkrets förstärkning av känslor
+title: Varför natten är jobbigast - Neurobiologin bakom mörkrets förstärkning av känslor
 description: Natten förstärker känslor genom låg kognitiv kapacitet, höjd amygdalaaktivitet och social isolering. Artikeln förklarar hur dygnsrytm, hormoner och minskad distraktion gör att oro, ensamhet och ångest ofta känns starkare efter mörkrets inbrott.
 date: 2025-11-13
-samling: ord-som-bar
+samling: faq
 readingTime: 3 min
 references:
   - Clow, A., Hucklebridge, F., Stalder, T., & Evans, P. (2004). The cortisol awakening response - More than a measure of HPA axis function. *Neuroscience & Biobehavioral Reviews, 35*(1), 9–15.

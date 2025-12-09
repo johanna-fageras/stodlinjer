@@ -2,7 +2,7 @@
 title: Handbok för svåra samtal - Konsten att förbereda sig för känsliga ämnen
 description: Artikeln ger en praktisk, forskningsbaserad guide till hur du förbereder dig inför svåra samtal om beroende, våld eller psykisk ohälsa. Den förklarar hur mål, gränser, formuleringar och mental förberedelse skapar tryggare och mer konstruktiva dialoger.
 date: 2025-11-09
-samling: praktiska-verktyg
+samling: handlingsguider
 readingTime: 4-5 min
 references:
   - Linehan, M. M. (1993). *Cognitive-behavioral treatment of borderline personality disorder*. Guilford Press.

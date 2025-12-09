@@ -2,7 +2,7 @@
 title: Varför det känns som att du är en börda – och hur du vet att du inte är det
 description: Artikeln förklarar varför känslan av att vara en börda uppstår vid psykisk ohälsa och kris. Den visar hur kognitiva snedvridningar skapar denna falska självbild och hur empati, sårbarhet och stödjande relationer bryter dess grepp.
 date: 2025-11-20
-samling: ord-som-bar
+samling: fordjupning
 readingTime: 5-6 min
 references:
   - Beck, A. T., Rush, A. J., Shaw, B. F., & Emery, G. (1979). *Cognitive Therapy of Depression*. Guilford Press.

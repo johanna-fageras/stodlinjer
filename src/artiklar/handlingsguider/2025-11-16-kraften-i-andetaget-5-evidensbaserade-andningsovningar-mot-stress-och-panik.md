@@ -2,7 +2,7 @@
 title: Kraften i Andetaget - 5 Evidensbaserade Andningsövningar mot Stress och Panik
 description: Artikeln presenterar fem evidensbaserade andningsövningar som snabbt reglerar nervsystemet vid stress och panik. Den förklarar hur kontrollerad andning aktiverar vagusnerven, lugnar kroppen och skapar ett stabiliserande ankare vid akuta känslotillstånd.
 date: 2025-11-16
-samling: praktiska-verktyg
+samling: handlingsguider
 readingTime: 5 min
 references:
   - Huber, D. J., Taylor, L. N., Grotegerd, D., & Kirmayer, L. J. (2023). The physiological sigh - Effects on mood and autonomic tone. *Cell Reports Medicine, 4*(1), 100867.
